@@ -1,0 +1,37 @@
+|part2
+out[0] <= mux_2to1_part2:mux3.port0
+out[1] <= mux_2to1_part2:mux2.port0
+out[2] <= mux_2to1_part2:mux1.port0
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+s => s.IN3
+
+
+|part2|mux_2to1_part2:mux1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part2|mux_2to1_part2:mux2
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part2|mux_2to1_part2:mux3
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+

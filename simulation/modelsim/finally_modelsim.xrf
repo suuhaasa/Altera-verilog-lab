@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Suhas/Documents/altera/finally.v
+source_file = 1, C:/Users/Suhas/Documents/altera/db/finally.cbx.xml
+design_name = finally
+instance = comp, \Y0~output\, Y0~output, finally, 1
+instance = comp, \Y1~output\, Y1~output, finally, 1
+instance = comp, \Y2~output\, Y2~output, finally, 1
+instance = comp, \Y3~output\, Y3~output, finally, 1
+instance = comp, \G1~input\, G1~input, finally, 1
+instance = comp, \A~input\, A~input, finally, 1
+instance = comp, \B~input\, B~input, finally, 1
+instance = comp, \G2~input\, G2~input, finally, 1
+instance = comp, \WideAnd0~0\, WideAnd0~0, finally, 1
+instance = comp, \WideAnd1~0\, WideAnd1~0, finally, 1
+instance = comp, \WideAnd2~0\, WideAnd2~0, finally, 1
+instance = comp, \WideAnd3~0\, WideAnd3~0, finally, 1

@@ -1,0 +1,17 @@
+|finally
+G1 => en.IN0
+G2 => en.IN1
+B => WideAnd2.IN1
+B => WideAnd3.IN1
+B => WideAnd0.IN1
+B => WideAnd1.IN1
+A => WideAnd1.IN2
+A => WideAnd3.IN2
+A => WideAnd0.IN2
+A => WideAnd2.IN2
+Y0 <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+Y1 <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,167 @@
+|part5
+segm1[0] <= seg71:segment1.port0
+segm1[1] <= seg71:segment1.port0
+segm1[2] <= seg71:segment1.port0
+segm1[3] <= seg71:segment1.port0
+segm1[4] <= seg71:segment1.port0
+segm1[5] <= seg71:segment1.port0
+segm1[6] <= seg71:segment1.port0
+segm2[0] <= seg72:segment2.port0
+segm2[1] <= seg72:segment2.port0
+segm2[2] <= seg72:segment2.port0
+segm2[3] <= seg72:segment2.port0
+segm2[4] <= seg72:segment2.port0
+segm2[5] <= seg72:segment2.port0
+segm2[6] <= seg72:segment2.port0
+segm3[0] <= seg73:segment3.port0
+segm3[1] <= seg73:segment3.port0
+segm3[2] <= seg73:segment3.port0
+segm3[3] <= seg73:segment3.port0
+segm3[4] <= seg73:segment3.port0
+segm3[5] <= seg73:segment3.port0
+segm3[6] <= seg73:segment3.port0
+u[0] => u[0].IN1
+u[1] => u[1].IN1
+v[0] => v[0].IN1
+v[1] => v[1].IN1
+w[0] => w[0].IN1
+w[1] => w[1].IN1
+s[0] => s[0].IN1
+s[1] => s[1].IN1
+
+
+|part5|seg71:segment1
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part5|seg72:segment2
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part5|seg73:segment3
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part5|mux_3to1_2bit:comb_3
+out[0] <= mux_2to1_3bit:comb_4.port0
+out[1] <= mux_2to1_3bit:comb_4.port0
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+z[0] => z[0].IN1
+z[1] => z[1].IN1
+s[0] => s[0].IN1
+s[1] => s[1].IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_3
+out[0] <= mux_2to1_1bit:mux3.port0
+out[1] <= mux_2to1_1bit:mux2.port0
+out[2] <= mux_2to1_1bit:mux1.port0
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+s => s.IN3
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_3|mux_2to1_1bit:mux1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_3|mux_2to1_1bit:mux2
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_3|mux_2to1_1bit:mux3
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_4
+out[0] <= mux_2to1_1bit:mux3.port0
+out[1] <= mux_2to1_1bit:mux2.port0
+out[2] <= mux_2to1_1bit:mux1.port0
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+s => s.IN3
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_4|mux_2to1_1bit:mux1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_4|mux_2to1_1bit:mux2
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part5|mux_3to1_2bit:comb_3|mux_2to1_3bit:comb_4|mux_2to1_1bit:mux3
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+

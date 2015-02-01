@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Suhas\Documents\altera\simulation\modelsim
+vfinally
+!i10b 1
+!s100 bKTkO748K7`8<F=edS>1a0
+IfC8N5UNe6`VYR_3eJld0A2
+V@94zI5Pz]m3fElG=mzPZ?3
+Z1 dC:\Users\Suhas\Documents\altera\simulation\modelsim
+w1422076526
+8C:/Users/Suhas/Documents/altera/finally.v
+FC:/Users/Suhas/Documents/altera/finally.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1422076565.831000
+!s107 C:/Users/Suhas/Documents/altera/finally.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Suhas/Documents/altera|C:/Users/Suhas/Documents/altera/finally.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera -O0

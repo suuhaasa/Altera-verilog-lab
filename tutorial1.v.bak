@@ -1,0 +1,8 @@
+module tutorial1;
+input clock;
+output LED;
+reg [23:0] count;
+always @(posedge clock) count <= count + 24'd1;
+
+assign LED = count[23];
+endmodule

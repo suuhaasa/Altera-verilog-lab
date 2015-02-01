@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Suhas\Documents\altera\simulation\modelsim
+Efinally
+Z1 w1422076895
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+Z8 dC:\Users\Suhas\Documents\altera\simulation\modelsim
+Z9 8finally.vho
+Z10 Ffinally.vho
+l0
+L34
+V;Q?_N7G@nYnaEgR0hm>[J0
+!s100 Gk9LSQa7MZKR`TecR:lfK0
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1422076938.137000
+Z13 !s90 -reportprogress|300|-93|-work|work|finally.vho|
+Z14 !s107 finally.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 finally 0 22 ;Q?_N7G@nYnaEgR0hm>[J0
+l78
+L47
+V@S`a5M`Jm5MZV2k;DndXe0
+!s100 Q4bFziEBLBR:D5of^E3880
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16

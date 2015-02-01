@@ -1,0 +1,80 @@
+# do temp_simlib_comp.tmp
+# Model Technology ModelSim PE Student Edition vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 22:10:28 on Jan 23,2015
+# vlog -work cycloneiii_ver -vlog01compat c:/altera/13.0sp1/quartus/eda/sim_lib/cycloneiii_atoms.v 
+# -- Compiling UDP CYCLONEIII_PRIM_DFFE
+# -- Compiling UDP CYCLONEIII_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIII_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneiii_dffe
+# -- Compiling module cycloneiii_mux21
+# -- Compiling module cycloneiii_mux41
+# -- Compiling module cycloneiii_and1
+# -- Compiling module cycloneiii_and16
+# -- Compiling module cycloneiii_bmux21
+# -- Compiling module cycloneiii_b17mux21
+# -- Compiling module cycloneiii_nmux21
+# -- Compiling module cycloneiii_b5mux21
+# -- Compiling module cycloneiii_latch
+# -- Compiling module cycloneiii_routing_wire
+# -- Compiling module cycloneiii_m_cntr
+# -- Compiling module cycloneiii_n_cntr
+# -- Compiling module cycloneiii_scale_cntr
+# -- Compiling module cycloneiii_pll_reg
+# -- Compiling module cycloneiii_pll
+# -- Compiling module cycloneiii_lcell_comb
+# -- Compiling module cycloneiii_ff
+# -- Compiling module cycloneiii_ram_pulse_generator
+# -- Compiling module cycloneiii_ram_register
+# -- Compiling module cycloneiii_ram_block
+# -- Compiling module cycloneiii_mac_data_reg
+# -- Compiling module cycloneiii_mac_sign_reg
+# -- Compiling module cycloneiii_mac_mult_internal
+# -- Compiling module cycloneiii_mac_mult
+# -- Compiling module cycloneiii_mac_out
+# -- Compiling module cycloneiii_io_ibuf
+# -- Compiling module cycloneiii_io_obuf
+# -- Compiling module cycloneiii_ddio_out
+# -- Compiling module cycloneiii_ddio_oe
+# -- Compiling module cycloneiii_pseudo_diff_out
+# -- Compiling module cycloneiii_io_pad
+# -- Compiling module cycloneiii_ena_reg
+# -- Compiling module cycloneiii_clkctrl
+# -- Compiling module cycloneiii_rublock
+# -- Compiling module cycloneiii_apfcontroller
+# -- Compiling module cycloneiii_termination_ctrl
+# -- Compiling module cycloneiii_termination_rupdn
+# -- Compiling module cycloneiii_termination
+# -- Compiling module cycloneiii_jtag
+# -- Compiling module cycloneiii_crcblock
+# -- Compiling module cycloneiii_oscillator
+# 
+# Top level modules:
+# 	cycloneiii_dffe
+# 	cycloneiii_and1
+# 	cycloneiii_and16
+# 	cycloneiii_bmux21
+# 	cycloneiii_b17mux21
+# 	cycloneiii_nmux21
+# 	cycloneiii_b5mux21
+# 	cycloneiii_pll_reg
+# 	cycloneiii_pll
+# 	cycloneiii_lcell_comb
+# 	cycloneiii_ff
+# 	cycloneiii_ram_block
+# 	cycloneiii_mac_mult
+# 	cycloneiii_mac_out
+# 	cycloneiii_io_ibuf
+# 	cycloneiii_io_obuf
+# 	cycloneiii_ddio_out
+# 	cycloneiii_ddio_oe
+# 	cycloneiii_pseudo_diff_out
+# 	cycloneiii_io_pad
+# 	cycloneiii_clkctrl
+# 	cycloneiii_rublock
+# 	cycloneiii_apfcontroller
+# 	cycloneiii_termination
+# 	cycloneiii_jtag
+# 	cycloneiii_crcblock
+# 	cycloneiii_oscillator
+# End time: 22:10:29 on Jan 23,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

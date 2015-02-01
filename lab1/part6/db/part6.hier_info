@@ -1,0 +1,97 @@
+|part6
+segm1[0] <= seg71:seg1.port0
+segm1[1] <= seg71:seg1.port0
+segm1[2] <= seg71:seg1.port0
+segm1[3] <= seg71:seg1.port0
+segm1[4] <= seg71:seg1.port0
+segm1[5] <= seg71:seg1.port0
+segm1[6] <= seg71:seg1.port0
+segm2[0] <= seg72:seg2.port0
+segm2[1] <= seg72:seg2.port0
+segm2[2] <= seg72:seg2.port0
+segm2[3] <= seg72:seg2.port0
+segm2[4] <= seg72:seg2.port0
+segm2[5] <= seg72:seg2.port0
+segm2[6] <= seg72:seg2.port0
+segm3[0] <= seg73:seg3.port0
+segm3[1] <= seg73:seg3.port0
+segm3[2] <= seg73:seg3.port0
+segm3[3] <= seg73:seg3.port0
+segm3[4] <= seg73:seg3.port0
+segm3[5] <= seg73:seg3.port0
+segm3[6] <= seg73:seg3.port0
+segm4[0] <= seg74:seg4.port0
+segm4[1] <= seg74:seg4.port0
+segm4[2] <= seg74:seg4.port0
+segm4[3] <= seg74:seg4.port0
+segm4[4] <= seg74:seg4.port0
+segm4[5] <= seg74:seg4.port0
+segm4[6] <= seg74:seg4.port0
+s[0] => s[0].IN4
+s[1] => s[1].IN4
+
+
+|part6|seg71:seg1
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part6|seg72:seg2
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part6|seg73:seg3
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
+|part6|seg74:seg4
+seg7[0] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[1] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[2] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[3] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[4] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[5] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+seg7[6] <= seg7.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => Equal0.IN1
+s[0] => Equal1.IN0
+s[0] => Equal2.IN1
+s[1] => Equal0.IN0
+s[1] => Equal1.IN1
+s[1] => Equal2.IN0
+
+
