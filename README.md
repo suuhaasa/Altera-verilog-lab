@@ -1,1 +1,3 @@
-this is a readme for the repo of the verilog stuff i have been working on
+# Altera-verilog-lab
+Repo of the altera verilog lab
+
