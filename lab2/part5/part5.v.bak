@@ -1,0 +1,20 @@
+module part5(So,a,b,co);
+input [3:0] a, b;
+input co;
+wire To;
+To = a + b + co;
+always
+begin
+if(To>9)
+begin
+Zo = 10;
+c1 = 1;
+end
+else
+begin
+Zo = 0;
+c1 = 0;
+end
+So = T-(~Zo + 1'b1);
+S1 = c1;
+endmodule

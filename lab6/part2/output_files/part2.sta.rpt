@@ -1,0 +1,1664 @@
+TimeQuest Timing Analyzer report for part2
+Thu Mar 12 19:29:59 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'KEY[2]'
+ 13. Slow 1200mV 85C Model Hold: 'KEY[2]'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'KEY[2]'
+ 27. Slow 1200mV 0C Model Hold: 'KEY[2]'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'KEY[2]'
+ 40. Fast 1200mV 0C Model Hold: 'KEY[2]'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Slow Corner Signal Integrity Metrics
+ 55. Fast Corner Signal Integrity Metrics
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Report TCCS
+ 59. Report RSKM
+ 60. Unconstrained Paths
+ 61. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; part2                                                             ;
+; Device Family      ; Cyclone III                                                       ;
+; Device Name        ; EP3C16F484C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Enabled                                                           ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[2]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[2] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 464.04 MHz ; 250.0 MHz       ; KEY[2]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++--------+--------+-------------------+
+; Clock  ; Slack  ; End Point TNS     ;
++--------+--------+-------------------+
+; KEY[2] ; -1.155 ; -7.797            ;
++--------+--------+-------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; KEY[2] ; 0.593 ; 0.000             ;
++--------+-------+-------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++--------+--------+---------------------------------+
+; Clock  ; Slack  ; End Point TNS                   ;
++--------+--------+---------------------------------+
+; KEY[2] ; -3.000 ; -20.000                         ;
++--------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'KEY[2]'                                                                  ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -1.155 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.127      ;
+; -1.087 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.183     ; 1.919      ;
+; -1.077 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.049      ;
+; -1.068 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.040      ;
+; -1.046 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.018      ;
+; -1.040 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.012      ;
+; -1.040 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.183     ; 1.872      ;
+; -1.039 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.011      ;
+; -1.039 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.011      ;
+; -1.038 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.183     ; 1.870      ;
+; -1.033 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 2.005      ;
+; -0.961 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.933      ;
+; -0.960 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.932      ;
+; -0.952 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.924      ;
+; -0.951 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.923      ;
+; -0.930 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.902      ;
+; -0.925 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.897      ;
+; -0.924 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.896      ;
+; -0.923 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.895      ;
+; -0.923 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.895      ;
+; -0.917 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.889      ;
+; -0.917 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.889      ;
+; -0.845 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.817      ;
+; -0.845 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.817      ;
+; -0.844 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.816      ;
+; -0.836 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.808      ;
+; -0.836 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.808      ;
+; -0.835 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.807      ;
+; -0.814 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.786      ;
+; -0.809 ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.781      ;
+; -0.808 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.780      ;
+; -0.807 ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.779      ;
+; -0.807 ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.779      ;
+; -0.803 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.775      ;
+; -0.801 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.773      ;
+; -0.801 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.773      ;
+; -0.776 ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.748      ;
+; -0.775 ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.747      ;
+; -0.769 ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.741      ;
+; -0.729 ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.701      ;
+; -0.729 ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.701      ;
+; -0.728 ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.700      ;
+; -0.720 ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.692      ;
+; -0.720 ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.692      ;
+; -0.719 ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.691      ;
+; -0.698 ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.670      ;
+; -0.695 ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.667      ;
+; -0.692 ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.664      ;
+; -0.670 ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.642      ;
+; -0.662 ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.634      ;
+; -0.662 ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.634      ;
+; -0.660 ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.632      ;
+; -0.659 ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.631      ;
+; -0.656 ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.628      ;
+; -0.653 ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.625      ;
+; -0.608 ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.183     ; 1.440      ;
+; -0.587 ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.559      ;
+; -0.580 ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.552      ;
+; -0.579 ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.551      ;
+; -0.554 ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.526      ;
+; -0.552 ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.183     ; 1.384      ;
+; -0.549 ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.521      ;
+; -0.546 ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.518      ;
+; -0.546 ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.518      ;
+; -0.544 ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.516      ;
+; -0.543 ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.515      ;
+; -0.543 ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.515      ;
+; -0.540 ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.512      ;
+; -0.537 ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.509      ;
+; -0.464 ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.436      ;
+; -0.463 ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.435      ;
+; -0.431 ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.403      ;
+; -0.430 ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.402      ;
+; -0.428 ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.400      ;
+; -0.297 ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.269      ;
+; -0.297 ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.269      ;
+; -0.296 ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.268      ;
+; -0.274 ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.246      ;
+; -0.272 ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.244      ;
+; -0.272 ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.043     ; 1.244      ;
+; -0.158 ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.135      ;
+; -0.150 ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.127      ;
+; -0.029 ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.006      ;
+; -0.027 ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.004      ;
+; -0.026 ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 1.003      ;
+; -0.008 ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 0.985      ;
+; -0.006 ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 0.983      ;
+; -0.003 ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.038     ; 0.980      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'KEY[2]'                                                                  ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; 0.593 ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.788      ;
+; 0.594 ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.789      ;
+; 0.597 ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.792      ;
+; 0.597 ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.792      ;
+; 0.598 ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.793      ;
+; 0.599 ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.794      ;
+; 0.717 ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.912      ;
+; 0.765 ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.960      ;
+; 0.847 ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.047      ;
+; 0.849 ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.049      ;
+; 0.849 ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.049      ;
+; 0.849 ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.049      ;
+; 0.850 ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.050      ;
+; 0.850 ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.050      ;
+; 0.863 ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.063      ;
+; 0.864 ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.064      ;
+; 0.866 ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.066      ;
+; 0.879 ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.079      ;
+; 0.880 ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.080      ;
+; 0.881 ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.081      ;
+; 0.881 ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.081      ;
+; 0.882 ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.082      ;
+; 0.973 ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.173      ;
+; 0.974 ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.174      ;
+; 0.975 ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.175      ;
+; 0.976 ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.176      ;
+; 0.976 ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.176      ;
+; 0.991 ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.191      ;
+; 0.992 ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.192      ;
+; 0.993 ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.193      ;
+; 0.994 ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.194      ;
+; 0.999 ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.199      ;
+; 1.001 ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.201      ;
+; 1.035 ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.235      ;
+; 1.080 ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.050     ; 1.187      ;
+; 1.085 ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.285      ;
+; 1.086 ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.286      ;
+; 1.087 ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.287      ;
+; 1.103 ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.303      ;
+; 1.104 ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.304      ;
+; 1.105 ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.305      ;
+; 1.111 ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.311      ;
+; 1.117 ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.050     ; 1.224      ;
+; 1.121 ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.321      ;
+; 1.123 ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.323      ;
+; 1.123 ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.323      ;
+; 1.128 ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.328      ;
+; 1.128 ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.328      ;
+; 1.128 ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.328      ;
+; 1.140 ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.340      ;
+; 1.141 ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.341      ;
+; 1.141 ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.341      ;
+; 1.145 ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.345      ;
+; 1.147 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.347      ;
+; 1.197 ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.397      ;
+; 1.208 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.408      ;
+; 1.208 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.408      ;
+; 1.210 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.410      ;
+; 1.215 ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.415      ;
+; 1.233 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.433      ;
+; 1.235 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.435      ;
+; 1.235 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.435      ;
+; 1.240 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.440      ;
+; 1.240 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.440      ;
+; 1.240 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.440      ;
+; 1.252 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.452      ;
+; 1.253 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.453      ;
+; 1.253 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.453      ;
+; 1.257 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.457      ;
+; 1.259 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.459      ;
+; 1.320 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.520      ;
+; 1.320 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.520      ;
+; 1.345 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.545      ;
+; 1.347 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.547      ;
+; 1.352 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.552      ;
+; 1.352 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.552      ;
+; 1.354 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.050     ; 1.461      ;
+; 1.364 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.564      ;
+; 1.365 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.565      ;
+; 1.369 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.569      ;
+; 1.371 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.571      ;
+; 1.390 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.050     ; 1.497      ;
+; 1.408 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.050     ; 1.515      ;
+; 1.432 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.632      ;
+; 1.457 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.657      ;
+; 1.464 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.664      ;
+; 1.477 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.677      ;
+; 1.481 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.681      ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'                                              ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target         ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov             ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]     ;
+; 0.146  ; 0.330        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]     ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.307  ; 0.307        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.416  ; 0.632        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]     ;
+; 0.416  ; 0.632        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; ov             ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]     ;
+; 0.453  ; 0.669        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.654  ; 0.654        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.654  ; 0.654        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.692  ; 0.692        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]|clk ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 2.875 ; 3.292 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.724 ; 2.131 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 1.715 ; 2.113 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 1.719 ; 2.118 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 1.783 ; 2.212 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.725 ; 2.133 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.772 ; 2.209 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.847 ; 2.233 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 1.533 ; 1.928 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; 2.875 ; 3.292 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -1.050 ; -1.452 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -1.374 ; -1.770 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -1.365 ; -1.753 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -1.369 ; -1.758 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -1.431 ; -1.848 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -1.375 ; -1.771 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -1.420 ; -1.844 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -1.482 ; -1.858 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -1.181 ; -1.565 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; -1.050 ; -1.452 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.723 ; 6.877 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 5.669 ; 5.683 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 5.492 ; 5.539 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.723 ; 6.877 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 5.473 ; 5.516 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 5.450 ; 5.477 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 5.408 ; 5.435 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.986 ; 5.017 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 5.000 ; 5.036 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 5.232 ; 5.259 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.892 ; 4.921 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 5.546 ; 5.559 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 5.376 ; 5.421 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.606 ; 6.758 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 5.359 ; 5.399 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 5.337 ; 5.362 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 5.297 ; 5.322 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.892 ; 4.921 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.906 ; 4.940 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 5.128 ; 5.153 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 526.32 MHz ; 250.0 MHz       ; KEY[2]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -0.900 ; -5.869           ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.532 ; 0.000            ;
++--------+-------+------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -20.000                        ;
++--------+--------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'KEY[2]'                                                                   ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -0.900 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.878      ;
+; -0.857 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.174     ; 1.698      ;
+; -0.838 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.174     ; 1.679      ;
+; -0.835 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.813      ;
+; -0.828 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.806      ;
+; -0.820 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.174     ; 1.661      ;
+; -0.801 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.779      ;
+; -0.800 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.778      ;
+; -0.800 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.778      ;
+; -0.783 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.761      ;
+; -0.782 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.760      ;
+; -0.735 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.713      ;
+; -0.734 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.712      ;
+; -0.728 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.706      ;
+; -0.727 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.705      ;
+; -0.702 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.680      ;
+; -0.701 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.679      ;
+; -0.700 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.678      ;
+; -0.700 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.678      ;
+; -0.683 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.661      ;
+; -0.682 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.660      ;
+; -0.682 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.660      ;
+; -0.635 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.613      ;
+; -0.635 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.613      ;
+; -0.634 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.612      ;
+; -0.628 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.606      ;
+; -0.627 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.605      ;
+; -0.627 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.605      ;
+; -0.602 ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.580      ;
+; -0.601 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.579      ;
+; -0.600 ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.578      ;
+; -0.600 ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.578      ;
+; -0.584 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.562      ;
+; -0.583 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.561      ;
+; -0.582 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.560      ;
+; -0.582 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.560      ;
+; -0.570 ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.548      ;
+; -0.566 ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.544      ;
+; -0.548 ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.526      ;
+; -0.535 ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.513      ;
+; -0.535 ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.513      ;
+; -0.534 ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.512      ;
+; -0.528 ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.506      ;
+; -0.527 ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.505      ;
+; -0.527 ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.505      ;
+; -0.501 ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.479      ;
+; -0.500 ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.478      ;
+; -0.495 ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.473      ;
+; -0.483 ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.461      ;
+; -0.471 ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.449      ;
+; -0.470 ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.448      ;
+; -0.469 ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.447      ;
+; -0.466 ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.444      ;
+; -0.451 ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.429      ;
+; -0.448 ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.426      ;
+; -0.431 ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.174     ; 1.272      ;
+; -0.408 ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.386      ;
+; -0.401 ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.379      ;
+; -0.400 ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.378      ;
+; -0.395 ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.373      ;
+; -0.391 ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.174     ; 1.232      ;
+; -0.373 ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.351      ;
+; -0.371 ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.349      ;
+; -0.370 ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.348      ;
+; -0.369 ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.347      ;
+; -0.366 ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.344      ;
+; -0.355 ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.333      ;
+; -0.351 ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.329      ;
+; -0.348 ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.326      ;
+; -0.301 ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.279      ;
+; -0.300 ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.278      ;
+; -0.272 ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.250      ;
+; -0.271 ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.249      ;
+; -0.270 ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.248      ;
+; -0.147 ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.125      ;
+; -0.147 ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.125      ;
+; -0.146 ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.124      ;
+; -0.136 ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.114      ;
+; -0.134 ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.112      ;
+; -0.134 ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.037     ; 1.112      ;
+; -0.032 ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 1.013      ;
+; -0.017 ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.998      ;
+; 0.088  ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.893      ;
+; 0.090  ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.891      ;
+; 0.091  ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.890      ;
+; 0.098  ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.883      ;
+; 0.100  ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.881      ;
+; 0.103  ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.034     ; 0.878      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'KEY[2]'                                                                   ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; 0.532 ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.710      ;
+; 0.533 ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.711      ;
+; 0.536 ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.714      ;
+; 0.536 ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.714      ;
+; 0.538 ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.716      ;
+; 0.538 ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.716      ;
+; 0.657 ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.835      ;
+; 0.696 ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.874      ;
+; 0.761 ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.942      ;
+; 0.762 ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.943      ;
+; 0.763 ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.944      ;
+; 0.764 ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.945      ;
+; 0.764 ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.945      ;
+; 0.764 ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.945      ;
+; 0.773 ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.954      ;
+; 0.774 ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.955      ;
+; 0.778 ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.959      ;
+; 0.782 ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.963      ;
+; 0.784 ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.965      ;
+; 0.784 ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.965      ;
+; 0.789 ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.970      ;
+; 0.791 ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 0.972      ;
+; 0.862 ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.043      ;
+; 0.863 ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.044      ;
+; 0.867 ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.048      ;
+; 0.869 ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.050      ;
+; 0.870 ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.051      ;
+; 0.878 ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.059      ;
+; 0.880 ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.061      ;
+; 0.885 ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.066      ;
+; 0.887 ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.068      ;
+; 0.903 ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.084      ;
+; 0.910 ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.091      ;
+; 0.937 ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.118      ;
+; 0.958 ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.139      ;
+; 0.959 ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.140      ;
+; 0.965 ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.146      ;
+; 0.974 ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.155      ;
+; 0.976 ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.157      ;
+; 0.981 ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.162      ;
+; 0.987 ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.077      ;
+; 0.999 ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.180      ;
+; 1.001 ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.182      ;
+; 1.001 ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.182      ;
+; 1.002 ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.183      ;
+; 1.004 ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.185      ;
+; 1.005 ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.186      ;
+; 1.006 ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.187      ;
+; 1.007 ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.097      ;
+; 1.014 ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.195      ;
+; 1.022 ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.203      ;
+; 1.022 ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.203      ;
+; 1.022 ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.203      ;
+; 1.033 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.214      ;
+; 1.054 ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.235      ;
+; 1.070 ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.251      ;
+; 1.071 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.252      ;
+; 1.071 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.252      ;
+; 1.073 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.254      ;
+; 1.097 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.278      ;
+; 1.097 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.278      ;
+; 1.098 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.279      ;
+; 1.100 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.281      ;
+; 1.101 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.282      ;
+; 1.102 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.283      ;
+; 1.110 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.291      ;
+; 1.118 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.299      ;
+; 1.118 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.299      ;
+; 1.118 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.299      ;
+; 1.129 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.310      ;
+; 1.167 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.348      ;
+; 1.167 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.348      ;
+; 1.193 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.374      ;
+; 1.194 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.375      ;
+; 1.196 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.377      ;
+; 1.197 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.378      ;
+; 1.206 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.387      ;
+; 1.214 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.395      ;
+; 1.214 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.395      ;
+; 1.225 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.406      ;
+; 1.230 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.320      ;
+; 1.238 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.328      ;
+; 1.263 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.444      ;
+; 1.280 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.054     ; 1.370      ;
+; 1.290 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.471      ;
+; 1.292 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.473      ;
+; 1.302 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.483      ;
+; 1.310 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.491      ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                               ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target         ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov             ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]     ;
+; 0.179  ; 0.363        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.225  ; 0.409        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]     ;
+; 0.225  ; 0.409        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk ;
+; 0.373  ; 0.589        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]     ;
+; 0.373  ; 0.589        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.385  ; 0.385        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.385  ; 0.385        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; ov             ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]     ;
+; 0.420  ; 0.636        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.613  ; 0.613        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.613  ; 0.613        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.660  ; 0.660        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]|clk ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 2.416 ; 2.777 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.421 ; 1.772 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 1.410 ; 1.743 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 1.414 ; 1.747 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 1.469 ; 1.830 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.420 ; 1.760 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.460 ; 1.823 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.523 ; 1.838 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 1.239 ; 1.567 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; 2.416 ; 2.777 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.808 ; -1.160 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -1.113 ; -1.454 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -1.103 ; -1.427 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -1.107 ; -1.431 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -1.159 ; -1.511 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -1.112 ; -1.443 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -1.151 ; -1.504 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -1.203 ; -1.509 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.931 ; -1.250 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; -0.808 ; -1.160 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.503 ; 6.630 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 5.452 ; 5.448 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 5.277 ; 5.295 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.503 ; 6.630 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 5.260 ; 5.270 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 5.239 ; 5.225 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 5.208 ; 5.211 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.813 ; 4.825 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.826 ; 4.844 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 5.038 ; 5.050 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.730 ; 4.741 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 5.342 ; 5.338 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 5.174 ; 5.191 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.400 ; 6.526 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 5.158 ; 5.168 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 5.139 ; 5.125 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 5.109 ; 5.111 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.730 ; 4.741 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.743 ; 4.759 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.946 ; 4.957 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -0.202 ; -0.633           ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.319 ; 0.000            ;
++--------+-------+------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -21.878                        ;
++--------+--------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'KEY[2]'                                                                   ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+; -0.202 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.184      ;
+; -0.159 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.141      ;
+; -0.151 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 1.062      ;
+; -0.149 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.131      ;
+; -0.145 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.127      ;
+; -0.140 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.122      ;
+; -0.138 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.120      ;
+; -0.134 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.116      ;
+; -0.134 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.116      ;
+; -0.121 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 1.032      ;
+; -0.095 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 1.006      ;
+; -0.091 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.073      ;
+; -0.090 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.072      ;
+; -0.081 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.063      ;
+; -0.077 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.059      ;
+; -0.072 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.054      ;
+; -0.072 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.054      ;
+; -0.070 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.052      ;
+; -0.070 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.052      ;
+; -0.067 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.049      ;
+; -0.066 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.048      ;
+; -0.066 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.048      ;
+; -0.023 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.005      ;
+; -0.022 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.004      ;
+; -0.021 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 1.003      ;
+; -0.013 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.995      ;
+; -0.009 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.991      ;
+; -0.004 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.986      ;
+; -0.004 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.986      ;
+; -0.003 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.985      ;
+; -0.002 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.984      ;
+; -0.002 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.984      ;
+; -0.002 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.984      ;
+; 0.001  ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.981      ;
+; 0.002  ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.980      ;
+; 0.002  ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.980      ;
+; 0.010  ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.972      ;
+; 0.014  ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.968      ;
+; 0.021  ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.961      ;
+; 0.045  ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.937      ;
+; 0.046  ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.936      ;
+; 0.047  ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.935      ;
+; 0.055  ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.927      ;
+; 0.059  ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.923      ;
+; 0.059  ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.923      ;
+; 0.064  ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.918      ;
+; 0.064  ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.918      ;
+; 0.066  ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.916      ;
+; 0.077  ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.905      ;
+; 0.078  ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.904      ;
+; 0.081  ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.901      ;
+; 0.082  ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.900      ;
+; 0.088  ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.894      ;
+; 0.089  ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.893      ;
+; 0.095  ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.887      ;
+; 0.114  ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 0.797      ;
+; 0.121  ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.861      ;
+; 0.127  ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.855      ;
+; 0.127  ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.855      ;
+; 0.141  ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 0.770      ;
+; 0.142  ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.840      ;
+; 0.145  ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.837      ;
+; 0.146  ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.836      ;
+; 0.146  ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.836      ;
+; 0.149  ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.833      ;
+; 0.150  ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.832      ;
+; 0.156  ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.826      ;
+; 0.157  ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.825      ;
+; 0.163  ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.819      ;
+; 0.195  ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.787      ;
+; 0.195  ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.787      ;
+; 0.224  ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.758      ;
+; 0.224  ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.758      ;
+; 0.225  ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.757      ;
+; 0.281  ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.701      ;
+; 0.282  ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.700      ;
+; 0.283  ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.699      ;
+; 0.293  ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.689      ;
+; 0.294  ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.688      ;
+; 0.294  ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.025     ; 0.688      ;
+; 0.354  ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.631      ;
+; 0.360  ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.625      ;
+; 0.433  ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.552      ;
+; 0.434  ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.551      ;
+; 0.434  ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.551      ;
+; 0.442  ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.543      ;
+; 0.444  ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.541      ;
+; 0.445  ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.022     ; 0.540      ;
++--------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'KEY[2]'                                                                   ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+; 0.319 ; store_B[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; store_B[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.425      ;
+; 0.320 ; store_B[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.426      ;
+; 0.321 ; store_B[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; store_B[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.427      ;
+; 0.322 ; store_B[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.428      ;
+; 0.380 ; store_B[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.486      ;
+; 0.402 ; store_B[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.508      ;
+; 0.452 ; store_A[4] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.561      ;
+; 0.452 ; store_A[5] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.561      ;
+; 0.453 ; store_A[0] ; store_B[0] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.562      ;
+; 0.453 ; store_A[1] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.562      ;
+; 0.453 ; store_A[3] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.562      ;
+; 0.454 ; store_A[2] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.563      ;
+; 0.465 ; store_B[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.574      ;
+; 0.465 ; store_B[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.574      ;
+; 0.466 ; store_B[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.575      ;
+; 0.476 ; store_B[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.585      ;
+; 0.476 ; store_B[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.585      ;
+; 0.477 ; store_B[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.586      ;
+; 0.479 ; store_B[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.588      ;
+; 0.480 ; store_B[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.589      ;
+; 0.528 ; store_B[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.637      ;
+; 0.528 ; store_B[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.637      ;
+; 0.529 ; store_B[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.638      ;
+; 0.531 ; store_B[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.640      ;
+; 0.531 ; store_B[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.640      ;
+; 0.535 ; store_B[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.644      ;
+; 0.538 ; store_B[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.647      ;
+; 0.542 ; store_B[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.651      ;
+; 0.543 ; store_B[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.652      ;
+; 0.545 ; store_B[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.654      ;
+; 0.546 ; store_B[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.655      ;
+; 0.548 ; store_B[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.657      ;
+; 0.565 ; store_A[7] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.020     ; 0.629      ;
+; 0.582 ; store_A[6] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.020     ; 0.646      ;
+; 0.594 ; store_B[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.703      ;
+; 0.594 ; store_B[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.703      ;
+; 0.597 ; store_B[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.706      ;
+; 0.600 ; store_A[5] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.709      ;
+; 0.601 ; store_B[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.710      ;
+; 0.601 ; store_A[3] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.710      ;
+; 0.601 ; store_A[1] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.710      ;
+; 0.608 ; store_B[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.717      ;
+; 0.609 ; store_B[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.718      ;
+; 0.611 ; store_B[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.720      ;
+; 0.611 ; store_B[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.720      ;
+; 0.611 ; store_A[4] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.720      ;
+; 0.612 ; store_A[0] ; store_B[1] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.721      ;
+; 0.613 ; store_A[2] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.722      ;
+; 0.614 ; store_B[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.723      ;
+; 0.614 ; store_A[4] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.723      ;
+; 0.615 ; store_A[0] ; store_B[2] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.724      ;
+; 0.616 ; store_A[2] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.725      ;
+; 0.660 ; store_B[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.769      ;
+; 0.663 ; store_A[5] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.772      ;
+; 0.664 ; store_A[3] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.773      ;
+; 0.664 ; store_A[1] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.773      ;
+; 0.666 ; store_A[5] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.775      ;
+; 0.667 ; store_A[3] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.776      ;
+; 0.667 ; store_A[1] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.776      ;
+; 0.674 ; store_B[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.783      ;
+; 0.677 ; store_B[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.786      ;
+; 0.677 ; store_A[4] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.786      ;
+; 0.678 ; store_A[0] ; store_B[3] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.787      ;
+; 0.679 ; store_A[2] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.788      ;
+; 0.680 ; store_B[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.789      ;
+; 0.680 ; store_A[4] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.789      ;
+; 0.681 ; store_A[0] ; store_B[4] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.790      ;
+; 0.682 ; store_A[2] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.791      ;
+; 0.713 ; store_A[7] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.020     ; 0.777      ;
+; 0.730 ; store_A[3] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.839      ;
+; 0.730 ; store_A[1] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.839      ;
+; 0.733 ; store_A[3] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.842      ;
+; 0.733 ; store_A[1] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.842      ;
+; 0.741 ; store_A[6] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.020     ; 0.805      ;
+; 0.743 ; store_B[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.852      ;
+; 0.744 ; store_A[0] ; store_B[5] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.853      ;
+; 0.744 ; store_A[6] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.020     ; 0.808      ;
+; 0.745 ; store_A[2] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.854      ;
+; 0.746 ; store_B[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.855      ;
+; 0.747 ; store_A[0] ; store_B[6] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.856      ;
+; 0.748 ; store_A[2] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.857      ;
+; 0.796 ; store_A[1] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.905      ;
+; 0.799 ; store_A[1] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.908      ;
+; 0.809 ; store_B[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.918      ;
+; 0.810 ; store_A[0] ; store_B[7] ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.919      ;
+; 0.813 ; store_A[0] ; ov         ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.025      ; 0.922      ;
++-------+------------+------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                               ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target         ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov             ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]     ;
+; -0.112 ; 0.072        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]     ;
+; -0.099 ; 0.085        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]     ;
+; -0.099 ; 0.085        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.068  ; 0.068        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk ;
+; 0.081  ; 0.081        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.081  ; 0.081        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i ;
+; 0.697  ; 0.913        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]     ;
+; 0.697  ; 0.913        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; ov             ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]     ;
+; 0.710  ; 0.926        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]     ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|o ;
+; 0.919  ; 0.919        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]|clk ;
+; 0.919  ; 0.919        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[7]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; ov|clk         ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[1]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[4]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]|clk ;
+; 0.932  ; 0.932        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]|clk ;
++--------+--------------+----------------+------------------+--------+------------+----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 1.661 ; 2.216 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.008 ; 1.561 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 0.991 ; 1.544 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 0.994 ; 1.545 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 1.047 ; 1.603 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.001 ; 1.554 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.035 ; 1.599 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.058 ; 1.622 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 0.892 ; 1.434 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; 1.661 ; 2.216 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.626 ; -1.178 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.808 ; -1.356 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.793 ; -1.340 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.795 ; -1.341 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.847 ; -1.397 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.802 ; -1.349 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.834 ; -1.392 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.852 ; -1.410 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.693 ; -1.231 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; -0.626 ; -1.178 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.119 ; 4.318 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 3.361 ; 3.439 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 3.285 ; 3.350 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.119 ; 4.318 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 3.272 ; 3.332 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 3.243 ; 3.292 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 3.226 ; 3.279 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.995 ; 3.016 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 3.009 ; 3.032 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 3.137 ; 3.180 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 2.941 ; 2.961 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 3.291 ; 3.365 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 3.218 ; 3.280 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.052 ; 4.248 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 3.206 ; 3.263 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 3.179 ; 3.225 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 3.163 ; 3.213 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.941 ; 2.961 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 2.955 ; 2.976 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 3.077 ; 3.119 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.155 ; 0.319 ; N/A      ; N/A     ; -3.000              ;
+;  KEY[2]          ; -1.155 ; 0.319 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -7.797 ; 0.0   ; 0.0      ; 0.0     ; -21.878             ;
+;  KEY[2]          ; -7.797 ; 0.000 ; N/A      ; N/A     ; -21.878             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 2.875 ; 3.292 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.724 ; 2.131 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 1.715 ; 2.113 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 1.719 ; 2.118 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 1.783 ; 2.212 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.725 ; 2.133 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.772 ; 2.209 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.847 ; 2.233 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 1.533 ; 1.928 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; 2.875 ; 3.292 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.626 ; -1.160 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.808 ; -1.356 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.793 ; -1.340 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.795 ; -1.341 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.847 ; -1.397 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.802 ; -1.349 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.834 ; -1.392 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.852 ; -1.410 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.693 ; -1.231 ; Rise       ; KEY[2]          ;
+;  SW[8]    ; KEY[2]     ; -0.626 ; -1.160 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.723 ; 6.877 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 5.669 ; 5.683 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 5.492 ; 5.539 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.723 ; 6.877 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 5.473 ; 5.516 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 5.450 ; 5.477 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 5.408 ; 5.435 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.986 ; 5.017 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 5.000 ; 5.036 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 5.232 ; 5.259 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 2.941 ; 2.961 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 3.291 ; 3.365 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 3.218 ; 3.280 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.052 ; 4.248 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 3.206 ; 3.263 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 3.179 ; 3.225 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 3.163 ; 3.213 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.941 ; 2.961 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 2.955 ; 2.976 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 3.077 ; 3.119 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDG[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[7]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[8]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; KEY[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.33 V              ; -0.00317 V          ; 0.162 V                              ; 0.063 V                              ; 3.54e-09 s                  ; 3.41e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.33 V             ; -0.00317 V         ; 0.162 V                             ; 0.063 V                             ; 3.54e-09 s                 ; 3.41e-09 s                 ; Yes                       ; Yes                       ;
+; LEDG[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.64 V              ; -0.0109 V           ; 0.244 V                              ; 0.16 V                               ; 2.42e-09 s                  ; 2.37e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.64 V             ; -0.0109 V          ; 0.244 V                             ; 0.16 V                              ; 2.42e-09 s                 ; 2.37e-09 s                 ; No                        ; Yes                       ;
+; LEDG[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; LEDG[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 88       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 88       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 17    ; 17   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 12 19:29:46 2015
+Info: Command: quartus_sta part2 -c part2
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'part2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[2] KEY[2]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.155
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.155        -7.797 KEY[2] 
+Info (332146): Worst-case hold slack is 0.593
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.593         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -20.000 KEY[2] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.900
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.900        -5.869 KEY[2] 
+Info (332146): Worst-case hold slack is 0.532
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.532         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -20.000 KEY[2] 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.202
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.202        -0.633 KEY[2] 
+Info (332146): Worst-case hold slack is 0.319
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.319         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -21.878 KEY[2] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Thu Mar 12 19:29:59 2015
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:09
+
+

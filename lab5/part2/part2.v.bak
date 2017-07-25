@@ -1,0 +1,24 @@
+module BCDCount(KEY, LEDG);
+input [2:1] KEY;
+output [0:1] LEDG;
+
+reg[1:0] state;
+reg[1:0] next_state;
+
+always @(negedge KEY[2])
+state = next_state;
+
+always @(state or KEY[1])
+begin
+case(state)
+2'b00: next_state = 2'b01;
+2'b01: next_state = 2'b10;
+2'b10: next_state = 2'b11;
+2'b11: next_state = 2'b00;
+endcase
+if(KEY[1]) next_state = 2'b00;
+end
+assign a[0] = LEDG[0];
+assign a[1] = LEDG[1];
+endmodule
+

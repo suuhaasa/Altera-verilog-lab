@@ -1,0 +1,34 @@
+module part1(SW, KEY, LEDG);
+input [1:0] SW;
+input [2:2] KEY;
+assign w = SW[1];
+assign reset = SW[0];
+assign clock = KEY[2];
+assign LEDG = state;
+wire reset, clock, w;
+reg [8:0] state = 9'd1;
+
+assign state = (reset==1'b1)? 9'd1:
+					(state==9'd1&&w==0)? 9'd2:
+					(state==9'd1&&w==1)? 9'd4:
+					(state==9'd2&&w==0)? 9'd4:
+					(state==9'd2&&w==1)? 9'd32:
+					(state==9'd4&&w==0)? 9'd8:
+					(state==9'd4&&w==1)? 9'd32:
+					(state==9'd8&&w==0)? 9'd16:
+					(state==9'd8&&w==1)? 9'd32:
+					(state==9'd16&&w==0)? 9'd16:
+					(state==9'd16&&w==1)? 9'd32:
+					(state==9'd32&&w==0)? 9'd2:
+					(state==9'd32&&w==1)? 9'd64:
+					(state==9'd64&&w==0)? 9'd2:
+					(state==9'd64&&w==1)? 9'd128:
+					(state==9'd128&&w==0)? 9'd2:
+					(state==9'd128&&w==1)? 9'd256:
+					(state==9'd256&&w==0)? 9'd2:
+					(state==9'd256&&w==1)? 9'd256: 
+					
+assign out1 = (state==9'd16&&w==0)? 1'b1:
+					(state==9'd256&&w==1)? 1'b1: 1'b0;
+endmodule
+					

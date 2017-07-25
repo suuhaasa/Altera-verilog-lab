@@ -1,0 +1,5 @@
+module part1(SW, LEDG);
+input [7:0] SW;
+output [8:0] LEDG
+assign {LEDG[8], LEDG[7:0]} = SW[3:0] + SW[7:4];
+endmodule

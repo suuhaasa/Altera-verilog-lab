@@ -1,0 +1,22 @@
+|part3
+Clk => clk_not.IN2
+D => D.IN1
+Qa <= part2_dlatch:d2.Q
+
+
+|part3|part2_dlatch:d1
+Clk => comb.IN0
+Clk => comb.IN0
+D => comb.IN1
+D => comb.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|part2_dlatch:d2
+Clk => comb.IN0
+Clk => comb.IN0
+D => comb.IN1
+D => comb.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

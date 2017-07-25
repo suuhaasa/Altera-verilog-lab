@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'delay'
+Slack : -3.967
+TNS   : -38.860
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -1.975
+TNS   : -37.220
+
+Type  : Slow 1200mV 85C Model Hold 'delay'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.560
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'delay'
+Slack : -1.567
+TNS   : -20.688
+
+Type  : Slow 1200mV 85C Model Removal 'delay'
+Slack : 0.766
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -31.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'delay'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Setup 'delay'
+Slack : -3.526
+TNS   : -33.796
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.629
+TNS   : -29.923
+
+Type  : Slow 1200mV 0C Model Hold 'delay'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.503
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'delay'
+Slack : -1.410
+TNS   : -18.872
+
+Type  : Slow 1200mV 0C Model Removal 'delay'
+Slack : 0.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -31.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'delay'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Setup 'delay'
+Slack : -2.381
+TNS   : -19.599
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.707
+TNS   : -9.856
+
+Type  : Fast 1200mV 0C Model Hold 'delay'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'delay'
+Slack : -1.034
+TNS   : -14.424
+
+Type  : Fast 1200mV 0C Model Removal 'delay'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -32.776
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.120
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'delay'
+Slack : -1.000
+TNS   : -16.000
+
+------------------------------------------------------------

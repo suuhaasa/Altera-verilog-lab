@@ -1,0 +1,1757 @@
+TimeQuest Timing Analyzer report for part1
+Thu Mar 12 18:45:14 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'KEY[2]'
+ 13. Slow 1200mV 85C Model Hold: 'KEY[2]'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'KEY[2]'
+ 27. Slow 1200mV 0C Model Hold: 'KEY[2]'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'KEY[2]'
+ 40. Fast 1200mV 0C Model Hold: 'KEY[2]'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Slow Corner Signal Integrity Metrics
+ 55. Fast Corner Signal Integrity Metrics
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Report TCCS
+ 59. Report RSKM
+ 60. Unconstrained Paths
+ 61. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; part1                                                             ;
+; Device Family      ; Cyclone III                                                       ;
+; Device Name        ; EP3C16F484C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Enabled                                                           ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[2]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[2] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 289.35 MHz ; 250.0 MHz       ; KEY[2]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++--------+--------+-------------------+
+; Clock  ; Slack  ; End Point TNS     ;
++--------+--------+-------------------+
+; KEY[2] ; -2.456 ; -26.285           ;
++--------+--------+-------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; KEY[2] ; 0.574 ; 0.000             ;
++--------+-------+-------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++--------+--------+---------------------------------+
+; Clock  ; Slack  ; End Point TNS                   ;
++--------+--------+---------------------------------+
+; KEY[2] ; -3.000 ; -28.000                         ;
++--------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'KEY[2]'                                                                                            ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -2.456 ; store_A[1]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 3.438      ;
+; -2.343 ; store_A[1]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.041      ; 3.304      ;
+; -2.281 ; store_A[1]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.048      ; 3.249      ;
+; -2.237 ; store_A[5]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.022      ; 3.179      ;
+; -2.234 ; store_A[2]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 3.216      ;
+; -2.220 ; store_A[1]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 3.185      ;
+; -2.200 ; store_A[2]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.076      ; 3.196      ;
+; -2.170 ; store_A[2]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.055      ; 3.145      ;
+; -2.165 ; store_A[4]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.048      ; 3.133      ;
+; -2.156 ; store_A[4]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 3.138      ;
+; -2.148 ; store_A[3]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.249      ; 3.317      ;
+; -2.145 ; store_A[1]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 3.110      ;
+; -2.124 ; store_A[5]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.001      ; 3.045      ;
+; -2.119 ; store_A[0]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.056      ; 3.095      ;
+; -2.101 ; store_A[4]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.041      ; 3.062      ;
+; -2.098 ; store_A[2]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.059      ; 3.077      ;
+; -2.086 ; store_A[0]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.070      ; 3.076      ;
+; -2.062 ; store_A[5]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.008      ; 2.990      ;
+; -2.055 ; store_A[0]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.049      ; 3.024      ;
+; -2.044 ; store_A[7]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.077      ; 3.041      ;
+; -2.035 ; store_A[3]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.228      ; 3.183      ;
+; -1.996 ; store_A[6]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 2.978      ;
+; -1.983 ; store_A[0]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.053      ; 2.956      ;
+; -1.973 ; store_A[3]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.235      ; 3.128      ;
+; -1.962 ; store_A[6]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.076      ; 2.958      ;
+; -1.957 ; store_B[1]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.791      ;
+; -1.925 ; store_A[1]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 2.873      ;
+; -1.918 ; store_A[0]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.053      ; 2.891      ;
+; -1.915 ; store_A[1]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 2.863      ;
+; -1.874 ; store_B[0]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.708      ;
+; -1.868 ; store_A[2]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.042      ; 2.830      ;
+; -1.844 ; store_B[1]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.657      ;
+; -1.839 ; store_B[3]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.673      ;
+; -1.806 ; store_A[0]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.064      ; 2.790      ;
+; -1.799 ; store_A[4]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 2.747      ;
+; -1.785 ; store_B[0]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.605      ;
+; -1.782 ; store_B[1]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.602      ;
+; -1.761 ; store_B[0]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.574      ;
+; -1.759 ; store_B[2]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.593      ;
+; -1.752 ; store_A[2]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.042      ; 2.714      ;
+; -1.742 ; store_A[0]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.047      ; 2.709      ;
+; -1.726 ; store_B[3]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.539      ;
+; -1.725 ; store_B[5]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.559      ;
+; -1.721 ; store_B[1]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 2.538      ;
+; -1.670 ; store_B[2]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.490      ;
+; -1.664 ; store_B[3]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.484      ;
+; -1.662 ; store_A[2]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.059      ; 2.641      ;
+; -1.649 ; store_B[0]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 2.466      ;
+; -1.646 ; store_B[2]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.459      ;
+; -1.646 ; store_B[1]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 2.463      ;
+; -1.644 ; store_B[4]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.478      ;
+; -1.638 ; store_B[0]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 2.455      ;
+; -1.626 ; store_A[0]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.047      ; 2.593      ;
+; -1.619 ; store_A[3]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.213      ; 2.752      ;
+; -1.614 ; store_A[1]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.056      ; 2.590      ;
+; -1.612 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.446      ;
+; -1.612 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.425      ;
+; -1.609 ; store_A[3]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.213      ; 2.742      ;
+; -1.555 ; store_B[4]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.375      ;
+; -1.550 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.370      ;
+; -1.538 ; store_A[6]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.055      ; 2.513      ;
+; -1.534 ; store_B[2]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 2.351      ;
+; -1.532 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.086     ; 2.366      ;
+; -1.531 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 2.344      ;
+; -1.527 ; store_A[7]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.063      ; 2.510      ;
+; -1.497 ; store_A[3]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.232      ; 2.649      ;
+; -1.472 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.092     ; 2.300      ;
+; -1.436 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 2.256      ;
+; -1.426 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.226      ;
+; -1.419 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.219      ;
+; -1.416 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.216      ;
+; -1.351 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.014     ; 2.257      ;
+; -1.343 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.143      ;
+; -1.308 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.108      ;
+; -1.304 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.104      ;
+; -1.298 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.098      ;
+; -1.294 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 2.242      ;
+; -1.273 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.375      ;
+; -1.269 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.064      ; 2.253      ;
+; -1.267 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.369      ;
+; -1.228 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 2.028      ;
+; -1.221 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 2.337      ;
+; -1.189 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.120     ; 1.989      ;
+; -1.174 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 1.991      ;
+; -1.157 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.259      ;
+; -1.152 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.254      ;
+; -1.151 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.253      ;
+; -1.106 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.095      ; 2.216      ;
+; -1.105 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 2.221      ;
+; -1.099 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 2.215      ;
+; -1.089 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.103     ; 1.906      ;
+; -1.088 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.107     ; 1.901      ;
+; -1.056 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 2.116      ;
+; -1.053 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.092     ; 1.881      ;
+; -1.050 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 2.110      ;
+; -1.041 ; store_A[1]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.143      ;
+; -1.036 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.092     ; 1.864      ;
+; -1.036 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.138      ;
+; -1.035 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.087      ; 2.137      ;
+; -1.033 ; store_B[7]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.100     ; 1.853      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'KEY[2]'                                                                                            ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.574 ; store_B[2]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.769      ;
+; 0.574 ; store_B[3]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.769      ;
+; 0.574 ; store_B[6]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.769      ;
+; 0.575 ; store_B[4]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.770      ;
+; 0.575 ; store_B[5]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.770      ;
+; 0.576 ; store_B[1]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.771      ;
+; 0.578 ; store_B[7]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.773      ;
+; 0.584 ; store_B[0]~_Duplicate_1 ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.779      ;
+; 0.821 ; store_A[0]              ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.194      ;
+; 0.843 ; store_B[1]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.043      ;
+; 0.843 ; store_B[3]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.043      ;
+; 0.844 ; store_B[5]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.044      ;
+; 0.857 ; store_B[0]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.057      ;
+; 0.858 ; store_B[2]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.058      ;
+; 0.858 ; store_B[6]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.058      ;
+; 0.859 ; store_B[0]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.059      ;
+; 0.859 ; store_B[4]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.059      ;
+; 0.860 ; store_B[2]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.060      ;
+; 0.861 ; store_B[4]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.061      ;
+; 0.888 ; store_A[3]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.413      ; 1.458      ;
+; 0.953 ; store_B[1]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.153      ;
+; 0.953 ; store_B[3]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.153      ;
+; 0.954 ; store_B[5]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.154      ;
+; 0.955 ; store_B[1]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.155      ;
+; 0.955 ; store_B[3]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.155      ;
+; 0.969 ; store_B[0]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.169      ;
+; 0.970 ; store_B[2]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.170      ;
+; 0.971 ; store_B[0]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.171      ;
+; 0.971 ; store_B[4]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.171      ;
+; 0.972 ; store_B[2]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.172      ;
+; 1.031 ; store_A[6]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.410      ;
+; 1.040 ; store_A[2]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.419      ;
+; 1.046 ; store_A[7]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.223      ; 1.426      ;
+; 1.065 ; store_B[1]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.265      ;
+; 1.065 ; store_B[3]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.265      ;
+; 1.067 ; store_B[1]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.267      ;
+; 1.074 ; store_A[0]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.447      ;
+; 1.081 ; store_B[0]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.281      ;
+; 1.082 ; store_B[2]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.282      ;
+; 1.083 ; store_B[0]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.283      ;
+; 1.108 ; store_A[5]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.172      ; 1.437      ;
+; 1.108 ; store_A[1]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.474      ;
+; 1.111 ; store_A[4]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.477      ;
+; 1.148 ; store_A[0]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.521      ;
+; 1.177 ; store_B[1]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.377      ;
+; 1.186 ; store_A[0]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.559      ;
+; 1.193 ; store_B[0]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.043      ; 1.393      ;
+; 1.199 ; store_A[3]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.413      ; 1.769      ;
+; 1.220 ; store_A[3]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.413      ; 1.790      ;
+; 1.254 ; store_B[5]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.359      ;
+; 1.257 ; store_B[4]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.362      ;
+; 1.260 ; store_A[0]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.633      ;
+; 1.281 ; store_A[6]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.660      ;
+; 1.293 ; store_A[2]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.672      ;
+; 1.298 ; store_A[0]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.671      ;
+; 1.311 ; store_A[3]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.413      ; 1.881      ;
+; 1.332 ; store_A[3]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.413      ; 1.902      ;
+; 1.364 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.730      ;
+; 1.370 ; store_A[2]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.749      ;
+; 1.372 ; store_A[0]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.745      ;
+; 1.395 ; store_A[1]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.761      ;
+; 1.405 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.784      ;
+; 1.410 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.216      ; 1.783      ;
+; 1.412 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.172      ; 1.741      ;
+; 1.415 ; store_A[4]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.781      ;
+; 1.427 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.793      ;
+; 1.440 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.172      ; 1.769      ;
+; 1.476 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.842      ;
+; 1.482 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.861      ;
+; 1.491 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.630      ;
+; 1.496 ; store_B[7]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.029      ; 1.626      ;
+; 1.498 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.637      ;
+; 1.507 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.873      ;
+; 1.517 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.222      ; 1.896      ;
+; 1.530 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.635      ;
+; 1.533 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.655      ;
+; 1.539 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.905      ;
+; 1.544 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.649      ;
+; 1.547 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.652      ;
+; 1.549 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.026      ; 1.676      ;
+; 1.619 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.985      ;
+; 1.638 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.743      ;
+; 1.642 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.747      ;
+; 1.651 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 2.017      ;
+; 1.655 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.760      ;
+; 1.656 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.026      ; 1.783      ;
+; 1.658 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.763      ;
+; 1.750 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.855      ;
+; 1.766 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.004      ; 1.871      ;
+; 1.782 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.029      ; 1.912      ;
+; 1.785 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.924      ;
+; 1.786 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.044      ; 1.931      ;
+; 1.786 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.193      ; 2.080      ;
+; 1.801 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.044      ; 1.946      ;
+; 1.808 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.930      ;
+; 1.818 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 2.034      ;
+; 1.825 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.947      ;
+; 1.829 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.152      ; 2.082      ;
+; 1.839 ; store_B[2]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.026      ; 1.966      ;
+; 1.878 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.029      ; 2.008      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'KEY[2]'                                                           ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov                          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.018  ; 0.173        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]                  ;
+; 0.018  ; 0.173        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]                  ;
+; 0.018  ; 0.173        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]                  ;
+; 0.029  ; 0.184        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]                  ;
+; 0.029  ; 0.184        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]                  ;
+; 0.032  ; 0.187        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]                  ;
+; 0.044  ; 0.199        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]                  ;
+; 0.053  ; 0.208        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]                  ;
+; 0.071  ; 0.226        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]                  ;
+; 0.071  ; 0.226        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]                  ;
+; 0.074  ; 0.229        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]                  ;
+; 0.074  ; 0.229        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]                  ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; 0.075  ; 0.259        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.077  ; 0.232        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov                          ;
+; 0.078  ; 0.233        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]                  ;
+; 0.083  ; 0.238        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]                  ;
+; 0.101  ; 0.256        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]                  ;
+; 0.101  ; 0.256        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]                  ;
+; 0.234  ; 0.234        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk              ;
+; 0.234  ; 0.234        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk              ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1|clk ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1|clk ;
+; 0.237  ; 0.237        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk              ;
+; 0.237  ; 0.237        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk              ;
+; 0.239  ; 0.239        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk              ;
+; 0.239  ; 0.239        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk              ;
+; 0.239  ; 0.239        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk              ;
+; 0.240  ; 0.240        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk                      ;
+; 0.241  ; 0.241        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk              ;
+; 0.245  ; 0.245        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o              ;
+; 0.246  ; 0.246        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk              ;
+; 0.249  ; 0.249        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk              ;
+; 0.249  ; 0.249        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk              ;
+; 0.252  ; 0.252        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk              ;
+; 0.264  ; 0.264        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk              ;
+; 0.264  ; 0.264        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk              ;
+; 0.264  ; 0.264        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk              ;
+; 0.275  ; 0.275        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; 0.525  ; 0.741        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.592  ; 0.742        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]                  ;
+; 0.592  ; 0.742        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]                  ;
+; 0.611  ; 0.761        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]                  ;
+; 0.616  ; 0.766        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; ov                          ;
+; 0.616  ; 0.766        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]                  ;
+; 0.620  ; 0.770        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]                  ;
+; 0.620  ; 0.770        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]                  ;
+; 0.623  ; 0.773        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]                  ;
+; 0.623  ; 0.773        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]                  ;
+; 0.639  ; 0.789        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]                  ;
+; 0.650  ; 0.800        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]                  ;
+; 0.662  ; 0.812        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]                  ;
+; 0.665  ; 0.815        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]                  ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.670 ; -0.416 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.860 ; -0.606 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.867 ; -0.613 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.854 ; -0.600 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.670 ; -0.416 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.867 ; -0.613 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.906 ; -0.652 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.854 ; -0.600 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.843 ; -0.589 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 1.133 ; 0.879 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.085 ; 0.831 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 1.093 ; 0.839 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 1.079 ; 0.825 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 0.881 ; 0.627 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.093 ; 0.839 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.133 ; 0.879 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.079 ; 0.825 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 1.068 ; 0.814 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.557 ; 6.236 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 4.701 ; 4.544 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 4.701 ; 4.544 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.557 ; 6.236 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 4.699 ; 4.542 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 4.689 ; 4.532 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 4.689 ; 4.532 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.714 ; 4.557 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.732 ; 4.575 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.747 ; 4.590 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.602 ; 4.445 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 4.612 ; 4.455 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 4.612 ; 4.455 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.469 ; 6.148 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 4.611 ; 4.454 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 4.602 ; 4.445 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 4.602 ; 4.445 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.627 ; 4.470 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.644 ; 4.487 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.658 ; 4.501 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 328.73 MHz ; 250.0 MHz       ; KEY[2]     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -2.042 ; -21.250          ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.515 ; 0.000            ;
++--------+-------+------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -28.000                        ;
++--------+--------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'KEY[2]'                                                                                             ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -2.042 ; store_A[1]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 3.029      ;
+; -1.964 ; store_A[1]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.043      ; 2.932      ;
+; -1.919 ; store_A[1]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.048      ; 2.892      ;
+; -1.903 ; store_A[2]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.060      ; 2.888      ;
+; -1.875 ; store_A[1]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.047      ; 2.847      ;
+; -1.872 ; store_A[5]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.027      ; 2.824      ;
+; -1.865 ; store_A[2]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.074      ; 2.864      ;
+; -1.845 ; store_A[2]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.055      ; 2.825      ;
+; -1.842 ; store_A[4]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.048      ; 2.815      ;
+; -1.804 ; store_A[4]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 2.791      ;
+; -1.794 ; store_A[5]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.008      ; 2.727      ;
+; -1.791 ; store_A[3]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.215      ; 2.931      ;
+; -1.789 ; store_A[1]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.047      ; 2.761      ;
+; -1.787 ; store_A[0]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.057      ; 2.769      ;
+; -1.784 ; store_A[4]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.043      ; 2.752      ;
+; -1.773 ; store_A[2]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.059      ; 2.757      ;
+; -1.749 ; store_A[0]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.071      ; 2.745      ;
+; -1.737 ; store_A[5]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.013      ; 2.675      ;
+; -1.729 ; store_A[0]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 2.706      ;
+; -1.713 ; store_A[3]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.196      ; 2.834      ;
+; -1.703 ; store_A[7]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.075      ; 2.703      ;
+; -1.703 ; store_A[6]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.060      ; 2.688      ;
+; -1.669 ; store_A[3]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.201      ; 2.795      ;
+; -1.665 ; store_A[6]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.074      ; 2.664      ;
+; -1.657 ; store_A[0]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.056      ; 2.638      ;
+; -1.627 ; store_B[1]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.470      ;
+; -1.616 ; store_A[0]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.056      ; 2.597      ;
+; -1.583 ; store_A[1]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.030      ; 2.538      ;
+; -1.582 ; store_A[1]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.030      ; 2.537      ;
+; -1.567 ; store_A[2]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.042      ; 2.534      ;
+; -1.556 ; store_B[0]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.399      ;
+; -1.549 ; store_B[1]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.373      ;
+; -1.524 ; store_B[3]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.367      ;
+; -1.506 ; store_A[4]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.030      ; 2.461      ;
+; -1.500 ; store_A[0]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.068      ; 2.493      ;
+; -1.499 ; store_B[0]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.328      ;
+; -1.491 ; store_B[1]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.320      ;
+; -1.478 ; store_B[0]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.302      ;
+; -1.463 ; store_A[2]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.042      ; 2.430      ;
+; -1.460 ; store_B[1]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 2.288      ;
+; -1.457 ; store_B[2]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.300      ;
+; -1.446 ; store_B[3]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.270      ;
+; -1.441 ; store_A[0]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.049      ; 2.415      ;
+; -1.426 ; store_B[5]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.269      ;
+; -1.425 ; store_A[2]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.059      ; 2.409      ;
+; -1.400 ; store_B[2]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.229      ;
+; -1.389 ; store_B[0]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 2.217      ;
+; -1.388 ; store_B[3]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.217      ;
+; -1.379 ; store_B[2]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.203      ;
+; -1.369 ; store_B[0]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 2.197      ;
+; -1.361 ; store_B[1]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 2.189      ;
+; -1.358 ; store_B[4]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.201      ;
+; -1.352 ; store_A[1]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.059      ; 2.336      ;
+; -1.348 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.172      ;
+; -1.337 ; store_A[0]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.049      ; 2.311      ;
+; -1.335 ; store_A[3]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.181      ; 2.441      ;
+; -1.333 ; store_A[3]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.181      ; 2.439      ;
+; -1.330 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.173      ;
+; -1.306 ; store_A[6]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.055      ; 2.286      ;
+; -1.301 ; store_B[4]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.130      ;
+; -1.293 ; store_A[7]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.061      ; 2.279      ;
+; -1.290 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.119      ;
+; -1.280 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 2.104      ;
+; -1.270 ; store_B[2]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 2.098      ;
+; -1.264 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.082     ; 2.107      ;
+; -1.259 ; store_A[3]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.200      ; 2.384      ;
+; -1.212 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.085     ; 2.052      ;
+; -1.198 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 2.027      ;
+; -1.167 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.978      ;
+; -1.163 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.974      ;
+; -1.155 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.966      ;
+; -1.123 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.007     ; 2.041      ;
+; -1.096 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.907      ;
+; -1.064 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.875      ;
+; -1.064 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.875      ;
+; -1.064 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.030      ; 2.019      ;
+; -1.052 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.863      ;
+; -1.028 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.068      ; 2.021      ;
+; -0.997 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.808      ;
+; -0.988 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 2.092      ;
+; -0.983 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 2.087      ;
+; -0.972 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 2.088      ;
+; -0.971 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 1.799      ;
+; -0.965 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.114     ; 1.776      ;
+; -0.911 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 2.015      ;
+; -0.892 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.101     ; 1.716      ;
+; -0.888 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 1.992      ;
+; -0.887 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.097     ; 1.715      ;
+; -0.883 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 1.987      ;
+; -0.872 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 1.988      ;
+; -0.856 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.098      ; 1.969      ;
+; -0.854 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.101      ; 1.970      ;
+; -0.838 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.085     ; 1.678      ;
+; -0.837 ; store_B[7]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.096     ; 1.666      ;
+; -0.836 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.085     ; 1.676      ;
+; -0.815 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.882      ;
+; -0.811 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 1.915      ;
+; -0.808 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.875      ;
+; -0.793 ; store_A[4]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 1.897      ;
+; -0.788 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.089      ; 1.892      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'KEY[2]'                                                                                             ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.515 ; store_B[3]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.693      ;
+; 0.515 ; store_B[6]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.693      ;
+; 0.516 ; store_B[2]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.694      ;
+; 0.516 ; store_B[5]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.694      ;
+; 0.517 ; store_B[1]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.695      ;
+; 0.517 ; store_B[4]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.695      ;
+; 0.520 ; store_B[7]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.698      ;
+; 0.527 ; store_B[0]~_Duplicate_1 ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 0.705      ;
+; 0.704 ; store_A[0]              ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.054      ;
+; 0.754 ; store_B[3]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.936      ;
+; 0.755 ; store_B[5]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.937      ;
+; 0.756 ; store_B[1]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.938      ;
+; 0.761 ; store_B[6]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.943      ;
+; 0.762 ; store_B[0]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.944      ;
+; 0.763 ; store_B[2]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.945      ;
+; 0.764 ; store_B[4]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.946      ;
+; 0.769 ; store_B[0]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.951      ;
+; 0.770 ; store_B[2]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.952      ;
+; 0.771 ; store_B[4]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 0.953      ;
+; 0.780 ; store_A[3]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.365      ; 1.289      ;
+; 0.843 ; store_B[3]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.025      ;
+; 0.844 ; store_B[5]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.026      ;
+; 0.845 ; store_B[1]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.027      ;
+; 0.850 ; store_B[3]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.032      ;
+; 0.852 ; store_B[1]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.034      ;
+; 0.858 ; store_B[0]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.040      ;
+; 0.859 ; store_B[2]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.041      ;
+; 0.860 ; store_B[4]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.042      ;
+; 0.865 ; store_B[0]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.047      ;
+; 0.866 ; store_B[2]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.048      ;
+; 0.894 ; store_A[6]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.247      ;
+; 0.900 ; store_A[2]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.253      ;
+; 0.917 ; store_A[7]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.210      ; 1.271      ;
+; 0.935 ; store_A[0]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.285      ;
+; 0.939 ; store_B[3]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.121      ;
+; 0.941 ; store_B[1]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.123      ;
+; 0.948 ; store_B[1]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.130      ;
+; 0.954 ; store_B[0]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.136      ;
+; 0.955 ; store_B[2]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.137      ;
+; 0.955 ; store_A[1]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.296      ;
+; 0.961 ; store_B[0]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.143      ;
+; 0.962 ; store_A[4]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.303      ;
+; 0.972 ; store_A[5]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.166      ; 1.282      ;
+; 1.017 ; store_A[0]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.367      ;
+; 1.031 ; store_A[0]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.381      ;
+; 1.037 ; store_B[1]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.219      ;
+; 1.050 ; store_B[0]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.038      ; 1.232      ;
+; 1.071 ; store_A[3]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.365      ; 1.580      ;
+; 1.078 ; store_A[3]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.365      ; 1.587      ;
+; 1.113 ; store_A[0]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.463      ;
+; 1.120 ; store_A[6]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.473      ;
+; 1.127 ; store_A[0]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.477      ;
+; 1.131 ; store_A[2]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.484      ;
+; 1.135 ; store_B[5]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.223      ;
+; 1.139 ; store_B[4]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.227      ;
+; 1.167 ; store_A[3]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.365      ; 1.676      ;
+; 1.174 ; store_A[3]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.365      ; 1.683      ;
+; 1.193 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.534      ;
+; 1.209 ; store_A[0]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.559      ;
+; 1.220 ; store_A[2]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.573      ;
+; 1.223 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.206      ; 1.573      ;
+; 1.227 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.580      ;
+; 1.236 ; store_A[1]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.577      ;
+; 1.243 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.584      ;
+; 1.262 ; store_A[4]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.603      ;
+; 1.263 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.166      ; 1.573      ;
+; 1.270 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.166      ; 1.580      ;
+; 1.289 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.630      ;
+; 1.316 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.669      ;
+; 1.323 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.209      ; 1.676      ;
+; 1.332 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.673      ;
+; 1.339 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.680      ;
+; 1.352 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 1.475      ;
+; 1.356 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 1.479      ;
+; 1.358 ; store_B[7]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 1.469      ;
+; 1.380 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.468      ;
+; 1.389 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.016      ; 1.494      ;
+; 1.393 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.481      ;
+; 1.396 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.484      ;
+; 1.405 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.515      ;
+; 1.428 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.769      ;
+; 1.435 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.197      ; 1.776      ;
+; 1.472 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.560      ;
+; 1.478 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.566      ;
+; 1.488 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.576      ;
+; 1.491 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.579      ;
+; 1.516 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.626      ;
+; 1.570 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.658      ;
+; 1.574 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.185      ; 1.848      ;
+; 1.583 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.001     ; 1.671      ;
+; 1.609 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 1.720      ;
+; 1.611 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.034      ; 1.734      ;
+; 1.617 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.743      ;
+; 1.621 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.141      ; 1.851      ;
+; 1.625 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.110      ; 1.824      ;
+; 1.626 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.037      ; 1.752      ;
+; 1.633 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.016      ; 1.738      ;
+; 1.649 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.016      ; 1.754      ;
+; 1.663 ; store_B[2]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.773      ;
+; 1.692 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 1.803      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov                          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.049  ; 0.204        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]                  ;
+; 0.049  ; 0.204        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]                  ;
+; 0.049  ; 0.204        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]                  ;
+; 0.060  ; 0.215        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]                  ;
+; 0.060  ; 0.215        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]                  ;
+; 0.060  ; 0.215        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]                  ;
+; 0.069  ; 0.224        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]                  ;
+; 0.097  ; 0.252        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]                  ;
+; 0.097  ; 0.252        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]                  ;
+; 0.100  ; 0.255        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]                  ;
+; 0.100  ; 0.255        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]                  ;
+; 0.100  ; 0.255        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]                  ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; 0.102  ; 0.286        ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.108  ; 0.263        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]                  ;
+; 0.109  ; 0.264        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov                          ;
+; 0.113  ; 0.268        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]                  ;
+; 0.123  ; 0.278        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]                  ;
+; 0.123  ; 0.278        ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]                  ;
+; 0.245  ; 0.245        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o              ;
+; 0.254  ; 0.254        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk              ;
+; 0.254  ; 0.254        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk              ;
+; 0.257  ; 0.257        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk              ;
+; 0.257  ; 0.257        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk              ;
+; 0.261  ; 0.261        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk              ;
+; 0.261  ; 0.261        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk              ;
+; 0.261  ; 0.261        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk              ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1|clk ;
+; 0.262  ; 0.262        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1|clk ;
+; 0.265  ; 0.265        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk              ;
+; 0.266  ; 0.266        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk                      ;
+; 0.271  ; 0.271        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk              ;
+; 0.271  ; 0.271        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk              ;
+; 0.271  ; 0.271        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk              ;
+; 0.271  ; 0.271        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk              ;
+; 0.280  ; 0.280        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk              ;
+; 0.280  ; 0.280        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk              ;
+; 0.280  ; 0.280        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk              ;
+; 0.310  ; 0.310        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk              ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; 0.497  ; 0.713        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.571  ; 0.721        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]                  ;
+; 0.571  ; 0.721        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]                  ;
+; 0.581  ; 0.731        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]                  ;
+; 0.585  ; 0.735        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; ov                          ;
+; 0.586  ; 0.736        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]                  ;
+; 0.595  ; 0.745        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]                  ;
+; 0.595  ; 0.745        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]                  ;
+; 0.595  ; 0.745        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]                  ;
+; 0.597  ; 0.747        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]                  ;
+; 0.597  ; 0.747        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]                  ;
+; 0.625  ; 0.775        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]                  ;
+; 0.634  ; 0.784        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]                  ;
+; 0.634  ; 0.784        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[5]                  ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.629 ; -0.376 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.785 ; -0.532 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.794 ; -0.541 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.782 ; -0.529 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.629 ; -0.376 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.794 ; -0.541 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.827 ; -0.574 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.782 ; -0.529 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.771 ; -0.518 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 1.031 ; 0.778 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 0.987 ; 0.734 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 0.996 ; 0.743 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 0.984 ; 0.731 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 0.822 ; 0.569 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 0.996 ; 0.743 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.031 ; 0.778 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 0.984 ; 0.731 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 0.973 ; 0.720 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.402 ; 6.087 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 4.547 ; 4.396 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 4.547 ; 4.396 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.402 ; 6.087 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 4.544 ; 4.393 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 4.534 ; 4.383 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 4.534 ; 4.383 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.559 ; 4.408 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.575 ; 4.424 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.590 ; 4.439 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.456 ; 4.305 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 4.467 ; 4.316 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 4.467 ; 4.316 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.323 ; 6.008 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 4.465 ; 4.314 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 4.456 ; 4.305 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 4.456 ; 4.305 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.481 ; 4.330 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.496 ; 4.345 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.510 ; 4.359 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; KEY[2] ; -0.960 ; -7.855           ;
++--------+--------+------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; KEY[2] ; 0.307 ; 0.000            ;
++--------+-------+------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; KEY[2] ; -3.000 ; -37.466                        ;
++--------+--------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'KEY[2]'                                                                                             ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -0.960 ; store_A[1]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.035      ; 1.955      ;
+; -0.903 ; store_A[1]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.023      ; 1.886      ;
+; -0.875 ; store_A[1]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.026      ; 1.861      ;
+; -0.839 ; store_A[1]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.008      ; 1.807      ;
+; -0.817 ; store_A[5]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.037      ; 1.814      ;
+; -0.805 ; store_A[2]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.817      ;
+; -0.804 ; store_A[1]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.008      ; 1.772      ;
+; -0.792 ; store_A[2]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.043      ; 1.795      ;
+; -0.787 ; store_A[4]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.035      ; 1.782      ;
+; -0.767 ; store_A[4]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.026      ; 1.753      ;
+; -0.760 ; store_A[2]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.040      ; 1.760      ;
+; -0.760 ; store_A[5]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.025      ; 1.745      ;
+; -0.752 ; store_A[3]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.178      ; 1.890      ;
+; -0.735 ; store_A[4]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.023      ; 1.718      ;
+; -0.732 ; store_A[5]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 1.720      ;
+; -0.728 ; store_A[7]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.044      ; 1.732      ;
+; -0.721 ; store_A[2]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.025      ; 1.706      ;
+; -0.717 ; store_A[0]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.055      ; 1.732      ;
+; -0.717 ; store_A[0]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.046      ; 1.723      ;
+; -0.695 ; store_A[3]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.166      ; 1.821      ;
+; -0.685 ; store_A[0]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.043      ; 1.688      ;
+; -0.667 ; store_A[3]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.169      ; 1.796      ;
+; -0.667 ; store_A[6]              ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.679      ;
+; -0.654 ; store_A[6]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.043      ; 1.657      ;
+; -0.654 ; store_A[1]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.001     ; 1.613      ;
+; -0.653 ; store_A[1]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.001     ; 1.612      ;
+; -0.648 ; store_B[1]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.564      ;
+; -0.646 ; store_A[0]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 1.634      ;
+; -0.621 ; store_A[0]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.028      ; 1.609      ;
+; -0.600 ; store_B[0]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.516      ;
+; -0.591 ; store_B[1]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.495      ;
+; -0.577 ; store_B[3]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.493      ;
+; -0.571 ; store_A[2]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.016      ; 1.547      ;
+; -0.563 ; store_B[1]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.470      ;
+; -0.549 ; store_B[0]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.456      ;
+; -0.546 ; store_A[4]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.001     ; 1.505      ;
+; -0.543 ; store_B[0]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.447      ;
+; -0.533 ; store_B[2]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.449      ;
+; -0.527 ; store_A[0]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.539      ;
+; -0.527 ; store_B[1]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.416      ;
+; -0.520 ; store_B[3]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.424      ;
+; -0.510 ; store_B[5]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.426      ;
+; -0.510 ; store_A[2]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.016      ; 1.486      ;
+; -0.506 ; store_A[2]              ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.025      ; 1.491      ;
+; -0.492 ; store_B[3]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.399      ;
+; -0.492 ; store_B[1]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.381      ;
+; -0.490 ; store_A[0]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.025      ; 1.475      ;
+; -0.482 ; store_B[2]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.389      ;
+; -0.479 ; store_B[0]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.368      ;
+; -0.478 ; store_B[0]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.367      ;
+; -0.476 ; store_B[2]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.380      ;
+; -0.465 ; store_B[4]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.381      ;
+; -0.454 ; store_A[1]              ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.032      ; 1.446      ;
+; -0.453 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.357      ;
+; -0.447 ; store_A[3]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.141      ; 1.548      ;
+; -0.446 ; store_A[3]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.141      ; 1.547      ;
+; -0.445 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.361      ;
+; -0.429 ; store_A[0]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.025      ; 1.414      ;
+; -0.428 ; store_A[6]              ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.040      ; 1.428      ;
+; -0.425 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.332      ;
+; -0.416 ; store_A[7]              ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.035      ; 1.411      ;
+; -0.415 ; store_B[4]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.322      ;
+; -0.411 ; store_B[2]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.300      ;
+; -0.408 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.312      ;
+; -0.397 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.044     ; 1.313      ;
+; -0.362 ; store_A[3]              ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.151      ; 1.473      ;
+; -0.359 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.047     ; 1.272      ;
+; -0.346 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.053     ; 1.253      ;
+; -0.342 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.222      ;
+; -0.341 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.221      ;
+; -0.328 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.208      ;
+; -0.302 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.001     ; 1.261      ;
+; -0.301 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.353      ;
+; -0.297 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.349      ;
+; -0.293 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.173      ;
+; -0.288 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.000      ; 1.248      ;
+; -0.271 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.151      ;
+; -0.270 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.150      ;
+; -0.261 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.141      ;
+; -0.254 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.052      ; 1.266      ;
+; -0.233 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.285      ;
+; -0.230 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.119      ;
+; -0.229 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.281      ;
+; -0.226 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.106      ;
+; -0.218 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 1.287      ;
+; -0.194 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.080     ; 1.074      ;
+; -0.193 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.245      ;
+; -0.174 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.071     ; 1.063      ;
+; -0.165 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.217      ;
+; -0.162 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.056     ; 1.066      ;
+; -0.161 ; store_A[1]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.213      ;
+; -0.159 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.046      ; 1.212      ;
+; -0.155 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.046      ; 1.208      ;
+; -0.154 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 1.223      ;
+; -0.150 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.062      ; 1.219      ;
+; -0.143 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.065      ; 1.215      ;
+; -0.136 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.047     ; 1.049      ;
+; -0.130 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 1.000        ; -0.047     ; 1.043      ;
+; -0.129 ; store_A[4]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.181      ;
+; -0.125 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 1.000        ; 0.045      ; 1.177      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'KEY[2]'                                                                                             ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.307 ; store_B[6]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.413      ;
+; 0.308 ; store_B[1]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.414      ;
+; 0.308 ; store_B[2]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.414      ;
+; 0.308 ; store_B[3]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.414      ;
+; 0.308 ; store_B[5]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.414      ;
+; 0.309 ; store_B[4]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.415      ;
+; 0.309 ; store_B[7]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.415      ;
+; 0.313 ; store_B[0]~_Duplicate_1 ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.022      ; 0.419      ;
+; 0.451 ; store_A[0]              ; store_B[0]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.669      ;
+; 0.454 ; store_B[1]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.562      ;
+; 0.454 ; store_B[3]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.562      ;
+; 0.454 ; store_B[5]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.562      ;
+; 0.464 ; store_B[0]~_Duplicate_1 ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.572      ;
+; 0.464 ; store_B[6]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.572      ;
+; 0.465 ; store_B[2]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.573      ;
+; 0.466 ; store_B[4]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.574      ;
+; 0.467 ; store_B[0]~_Duplicate_1 ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.575      ;
+; 0.468 ; store_B[2]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.576      ;
+; 0.469 ; store_A[3]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.267      ; 0.820      ;
+; 0.469 ; store_B[4]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.577      ;
+; 0.517 ; store_B[1]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.625      ;
+; 0.517 ; store_B[3]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.625      ;
+; 0.517 ; store_B[5]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.625      ;
+; 0.520 ; store_B[1]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.628      ;
+; 0.520 ; store_B[3]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.628      ;
+; 0.530 ; store_B[0]~_Duplicate_1 ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.638      ;
+; 0.531 ; store_B[2]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.639      ;
+; 0.532 ; store_B[4]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.640      ;
+; 0.533 ; store_B[0]~_Duplicate_1 ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.641      ;
+; 0.534 ; store_B[2]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.642      ;
+; 0.583 ; store_B[1]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.691      ;
+; 0.583 ; store_B[3]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.691      ;
+; 0.583 ; store_A[6]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 0.798      ;
+; 0.585 ; store_A[2]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 0.800      ;
+; 0.586 ; store_B[1]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.694      ;
+; 0.589 ; store_A[0]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.807      ;
+; 0.596 ; store_B[0]~_Duplicate_1 ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.704      ;
+; 0.597 ; store_B[2]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.705      ;
+; 0.597 ; store_A[7]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.124      ; 0.805      ;
+; 0.599 ; store_B[0]~_Duplicate_1 ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.707      ;
+; 0.609 ; store_A[0]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.827      ;
+; 0.613 ; store_A[5]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.118      ; 0.815      ;
+; 0.617 ; store_A[3]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.267      ; 0.968      ;
+; 0.620 ; store_A[1]              ; store_B[1]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 0.819      ;
+; 0.626 ; store_A[4]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 0.825      ;
+; 0.649 ; store_B[1]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.757      ;
+; 0.655 ; store_A[0]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.873      ;
+; 0.662 ; store_B[0]~_Duplicate_1 ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.024      ; 0.770      ;
+; 0.675 ; store_A[0]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.893      ;
+; 0.676 ; store_A[3]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.267      ; 1.027      ;
+; 0.681 ; store_B[5]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.730      ;
+; 0.683 ; store_A[3]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.267      ; 1.034      ;
+; 0.684 ; store_B[4]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.733      ;
+; 0.721 ; store_A[0]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.939      ;
+; 0.733 ; store_A[6]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 0.948      ;
+; 0.739 ; store_A[2]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 0.954      ;
+; 0.741 ; store_A[0]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 0.959      ;
+; 0.742 ; store_A[3]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.267      ; 1.093      ;
+; 0.747 ; store_A[2]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 0.962      ;
+; 0.761 ; store_A[5]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.118      ; 0.963      ;
+; 0.768 ; store_A[1]              ; store_B[2]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 0.967      ;
+; 0.785 ; store_A[4]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 0.984      ;
+; 0.787 ; store_A[0]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.134      ; 1.005      ;
+; 0.788 ; store_A[4]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 0.987      ;
+; 0.805 ; store_A[2]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 1.020      ;
+; 0.808 ; store_B[7]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 0.887      ;
+; 0.808 ; store_B[0]~_Duplicate_1 ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.028      ; 0.894      ;
+; 0.813 ; store_A[2]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 1.028      ;
+; 0.817 ; store_A[5]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.118      ; 1.019      ;
+; 0.818 ; store_B[1]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.028      ; 0.904      ;
+; 0.825 ; store_A[1]              ; store_B[3]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.024      ;
+; 0.828 ; store_B[6]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.018      ; 0.904      ;
+; 0.831 ; store_B[3]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.880      ;
+; 0.834 ; store_A[1]              ; store_B[4]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.033      ;
+; 0.841 ; store_B[4]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.890      ;
+; 0.845 ; store_B[2]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.894      ;
+; 0.851 ; store_A[4]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.050      ;
+; 0.864 ; store_B[3]~_Duplicate_1 ; store_B[3]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.003      ; 0.925      ;
+; 0.871 ; store_A[2]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.131      ; 1.086      ;
+; 0.891 ; store_A[1]              ; store_B[5]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.090      ;
+; 0.892 ; store_B[3]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.941      ;
+; 0.897 ; store_B[1]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.946      ;
+; 0.900 ; store_A[1]              ; store_B[6]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.099      ;
+; 0.901 ; store_B[2]~_Duplicate_1 ; store_B[2]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.003      ; 0.962      ;
+; 0.906 ; store_B[2]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.955      ;
+; 0.910 ; store_B[0]~_Duplicate_1 ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 0.959      ;
+; 0.957 ; store_A[1]              ; store_B[7]~_Duplicate_1 ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.115      ; 1.156      ;
+; 0.958 ; store_B[1]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 1.007      ;
+; 0.961 ; store_A[0]              ; store_B[0]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.128      ; 1.147      ;
+; 0.965 ; store_B[6]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.044      ;
+; 0.971 ; store_B[0]~_Duplicate_1 ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; -0.009     ; 1.020      ;
+; 0.974 ; store_B[7]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.031      ; 1.063      ;
+; 0.976 ; store_B[0]~_Duplicate_1 ; store_B[1]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.028      ; 1.062      ;
+; 0.977 ; store_B[5]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.018      ; 1.053      ;
+; 0.986 ; store_B[6]~_Duplicate_1 ; ov                      ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.031      ; 1.075      ;
+; 0.992 ; store_B[4]~_Duplicate_1 ; store_B[6]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.018      ; 1.068      ;
+; 0.998 ; store_A[5]              ; store_B[5]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.075      ; 1.131      ;
+; 1.004 ; store_A[3]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.224      ; 1.286      ;
+; 1.013 ; store_A[4]              ; store_B[4]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.072      ; 1.143      ;
+; 1.018 ; store_B[5]~_Duplicate_1 ; store_B[7]              ; KEY[2]       ; KEY[2]      ; 0.000        ; 0.021      ; 1.097      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'KEY[2]'                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; KEY[2] ; Rise       ; KEY[2]                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; ov                          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_A[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; -0.300 ; -0.145       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]                  ;
+; -0.292 ; -0.137       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]                  ;
+; -0.291 ; -0.136       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]                  ;
+; -0.291 ; -0.136       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]                  ;
+; -0.290 ; -0.135       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]                  ;
+; -0.290 ; -0.135       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]                  ;
+; -0.288 ; -0.133       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]                  ;
+; -0.287 ; -0.132       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]                  ;
+; -0.285 ; -0.130       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]                  ;
+; -0.285 ; -0.130       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]                  ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; -0.283 ; -0.099       ; 0.184          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; -0.273 ; -0.118       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]                  ;
+; -0.273 ; -0.118       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]                  ;
+; -0.260 ; -0.105       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]                  ;
+; -0.260 ; -0.105       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]                  ;
+; -0.260 ; -0.105       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]                  ;
+; -0.259 ; -0.104       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov                          ;
+; -0.255 ; -0.100       ; 0.155          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]                  ;
+; -0.112 ; -0.112       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]|clk              ;
+; -0.112 ; -0.112       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]|clk              ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1|clk ;
+; -0.103 ; -0.103       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1|clk ;
+; -0.100 ; -0.100       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[0]|clk              ;
+; -0.100 ; -0.100       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[1]|clk              ;
+; -0.099 ; -0.099       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[5]|clk              ;
+; -0.092 ; -0.092       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[7]|clk              ;
+; -0.091 ; -0.091       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[1]|clk              ;
+; -0.091 ; -0.091       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[4]|clk              ;
+; -0.090 ; -0.090       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[2]|clk              ;
+; -0.090 ; -0.090       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[6]|clk              ;
+; -0.087 ; -0.087       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; ov|clk                      ;
+; -0.087 ; -0.087       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[0]|clk              ;
+; -0.087 ; -0.087       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[4]|clk              ;
+; -0.087 ; -0.087       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[5]|clk              ;
+; -0.087 ; -0.087       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[7]|clk              ;
+; -0.086 ; -0.086       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_A[3]|clk              ;
+; -0.082 ; -0.082       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; store_B[6]|clk              ;
+; -0.059 ; -0.059       ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|o              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[2] ; Rise       ; KEY[2]~input|i              ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]~_Duplicate_1     ;
+; 0.880  ; 1.096        ; 0.216          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]~_Duplicate_1     ;
+; 0.943  ; 1.093        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[6]                  ;
+; 0.948  ; 1.098        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; ov                          ;
+; 0.948  ; 1.098        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[4]                  ;
+; 0.948  ; 1.098        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[5]                  ;
+; 0.948  ; 1.098        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[7]                  ;
+; 0.961  ; 1.111        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[0]                  ;
+; 0.961  ; 1.111        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[1]                  ;
+; 0.973  ; 1.123        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[2]                  ;
+; 0.973  ; 1.123        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_B[3]                  ;
+; 0.974  ; 1.124        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[3]                  ;
+; 0.976  ; 1.126        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[0]                  ;
+; 0.979  ; 1.129        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[2]                  ;
+; 0.979  ; 1.129        ; 0.150          ; High Pulse Width ; KEY[2] ; Rise       ; store_A[6]                  ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.355 ; 0.203 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.488 ; 0.070 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.507 ; 0.051 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.491 ; 0.067 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.355 ; 0.203 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.507 ; 0.051 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.505 ; 0.053 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.491 ; 0.067 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.488 ; 0.070 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Hold Times                                                             ;
++-----------+------------+-------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+--------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 0.630 ; 0.072  ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 0.610 ; 0.052  ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 0.630 ; 0.072  ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 0.613 ; 0.055  ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 0.468 ; -0.090 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 0.630 ; 0.072  ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 0.628 ; 0.070  ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 0.613 ; 0.055  ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 0.611 ; 0.053  ; Rise       ; KEY[2]          ;
++-----------+------------+-------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 4.238 ; 3.960 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 2.802 ; 2.714 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 2.802 ; 2.714 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.238 ; 3.960 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 2.787 ; 2.699 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 2.786 ; 2.698 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 2.786 ; 2.698 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.822 ; 2.734 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 2.835 ; 2.747 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 2.845 ; 2.757 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 2.749 ; 2.661 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 2.749 ; 2.661 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.186 ; 3.908 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.770 ; 2.682 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 2.783 ; 2.695 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 2.792 ; 2.704 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.456  ; 0.307 ; N/A      ; N/A     ; -3.000              ;
+;  KEY[2]          ; -2.456  ; 0.307 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -26.285 ; 0.0   ; 0.0      ; 0.0     ; -37.466             ;
+;  KEY[2]          ; -26.285 ; 0.000 ; N/A      ; N/A     ; -37.466             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; -0.355 ; 0.203 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; -0.488 ; 0.070 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; -0.507 ; 0.051 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; -0.491 ; 0.067 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; -0.355 ; 0.203 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; -0.507 ; 0.051 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; -0.505 ; 0.053 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; -0.491 ; 0.067 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; -0.488 ; 0.070 ; Rise       ; KEY[2]          ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[2]     ; 1.133 ; 0.879 ; Rise       ; KEY[2]          ;
+;  SW[0]    ; KEY[2]     ; 1.085 ; 0.831 ; Rise       ; KEY[2]          ;
+;  SW[1]    ; KEY[2]     ; 1.093 ; 0.839 ; Rise       ; KEY[2]          ;
+;  SW[2]    ; KEY[2]     ; 1.079 ; 0.825 ; Rise       ; KEY[2]          ;
+;  SW[3]    ; KEY[2]     ; 0.881 ; 0.627 ; Rise       ; KEY[2]          ;
+;  SW[4]    ; KEY[2]     ; 1.093 ; 0.839 ; Rise       ; KEY[2]          ;
+;  SW[5]    ; KEY[2]     ; 1.133 ; 0.879 ; Rise       ; KEY[2]          ;
+;  SW[6]    ; KEY[2]     ; 1.079 ; 0.825 ; Rise       ; KEY[2]          ;
+;  SW[7]    ; KEY[2]     ; 1.068 ; 0.814 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 6.557 ; 6.236 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 4.701 ; 4.544 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 4.701 ; 4.544 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 6.557 ; 6.236 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 4.699 ; 4.542 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 4.689 ; 4.532 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 4.689 ; 4.532 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 4.714 ; 4.557 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 4.732 ; 4.575 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 4.747 ; 4.590 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[0]  ; KEY[2]     ; 2.749 ; 2.661 ; Rise       ; KEY[2]          ;
+;  LEDG[1]  ; KEY[2]     ; 2.749 ; 2.661 ; Rise       ; KEY[2]          ;
+;  LEDG[2]  ; KEY[2]     ; 4.186 ; 3.908 ; Rise       ; KEY[2]          ;
+;  LEDG[3]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[4]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[5]  ; KEY[2]     ; 2.735 ; 2.647 ; Rise       ; KEY[2]          ;
+;  LEDG[6]  ; KEY[2]     ; 2.770 ; 2.682 ; Rise       ; KEY[2]          ;
+;  LEDG[7]  ; KEY[2]     ; 2.783 ; 2.695 ; Rise       ; KEY[2]          ;
+;  LEDG[8]  ; KEY[2]     ; 2.792 ; 2.704 ; Rise       ; KEY[2]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LEDG[0]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[1]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[2]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[3]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[4]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[5]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[6]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[7]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[8]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; KEY[1]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; KEY[2]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[2]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[3]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[4]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[5]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[6]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[7]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[2]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.08 V              ; -0.00513 V          ; 0.274 V                              ; 0.267 V                              ; 5.67e-09 s                  ; 4.62e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.08 V             ; -0.00513 V         ; 0.274 V                             ; 0.267 V                             ; 5.67e-09 s                 ; 4.62e-09 s                 ; No                        ; Yes                       ;
+; LEDG[3]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[4]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; LEDG[8]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.06e-06 V                   ; 3.12 V              ; -0.0308 V           ; 0.224 V                              ; 0.218 V                              ; 1.32e-09 s                  ; 1.07e-09 s                  ; No                         ; Yes                        ; 3.08 V                      ; 2.06e-06 V                  ; 3.12 V             ; -0.0308 V          ; 0.224 V                             ; 0.218 V                             ; 1.32e-09 s                 ; 1.07e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.02e-06 V                   ; 3.14 V              ; -0.0402 V           ; 0.146 V                              ; 0.156 V                              ; 4.62e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 1.02e-06 V                  ; 3.14 V             ; -0.0402 V          ; 0.146 V                             ; 0.156 V                             ; 4.62e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LEDG[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[2]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.48 V              ; -0.0136 V           ; 0.352 V                              ; 0.346 V                              ; 4.12e-09 s                  ; 3.34e-09 s                  ; No                         ; Yes                        ; 3.46 V                      ; 1.29e-07 V                  ; 3.48 V             ; -0.0136 V          ; 0.352 V                             ; 0.346 V                             ; 4.12e-09 s                 ; 3.34e-09 s                 ; No                        ; Yes                       ;
+; LEDG[3]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[4]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; LEDG[8]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.29e-07 V                   ; 3.55 V              ; -0.053 V            ; 0.341 V                              ; 0.35 V                               ; 9.04e-10 s                  ; 7.28e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.29e-07 V                  ; 3.55 V             ; -0.053 V           ; 0.341 V                             ; 0.35 V                              ; 9.04e-10 s                 ; 7.28e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.52e-08 V                   ; 3.58 V              ; -0.064 V            ; 0.234 V                              ; 0.085 V                              ; 2.93e-10 s                  ; 3.07e-10 s                  ; Yes                        ; Yes                        ; 3.46 V                      ; 6.52e-08 V                  ; 3.58 V             ; -0.064 V           ; 0.234 V                             ; 0.085 V                             ; 2.93e-10 s                 ; 3.07e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 160      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[2]     ; KEY[2]   ; 160      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 12 18:45:08 2015
+Info: Command: quartus_sta part1 -c part1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'part1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[2] KEY[2]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.456
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.456       -26.285 KEY[2] 
+Info (332146): Worst-case hold slack is 0.574
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.574         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -28.000 KEY[2] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.042
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.042       -21.250 KEY[2] 
+Info (332146): Worst-case hold slack is 0.515
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.515         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -28.000 KEY[2] 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.960
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.960        -7.855 KEY[2] 
+Info (332146): Worst-case hold slack is 0.307
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.307         0.000 KEY[2] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -37.466 KEY[2] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 454 megabytes
+    Info: Processing ended: Thu Mar 12 18:45:13 2015
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+

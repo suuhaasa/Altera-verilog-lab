@@ -1,0 +1,23 @@
+module rippleadder4(s, cout, a, b, cin);
+input [3:0] a, b;
+input cin;
+output [3:0] s;
+output cout;
+endmodule
+
+module fulladder1(s, cout, a, b, cin);
+input a, b;
+input cin;
+output s;
+output cout;
+wire t;
+xor xor1(t, a, b);
+xor xor2(s, t, cin)
+mux_2to1_1bit(cout, b, cin, t);
+endmodule
+
+module mux_2to1_1bit(out, x, y, s);
+input x, y, s;
+output out;
+assign out = (~s&x)|(s&y);
+endmodule

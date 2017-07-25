@@ -1,0 +1,324 @@
+|part4
+HEX1[6] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[5] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[4] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[3] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[2] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[1] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX1[0] <= part4_bcdcircuit:bcdcircuit1.port0
+HEX0[6] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[5] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[4] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[3] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[2] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[1] <= part4_bcdcircuit:bcdcircuit1.port1
+HEX0[0] <= part4_bcdcircuit:bcdcircuit1.port1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+
+
+|part4|part3_adder:adder1
+addOut[0] <= fulladder1:fa1.port0
+addOut[1] <= fulladder1:fa2.port0
+addOut[2] <= fulladder1:fa3.port0
+addOut[3] <= fulladder1:fa4.port0
+cout <= fulladder1:fa4.port1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux_2to1_1bit:comb_5.port0
+a => xor1.IN0
+b => b.IN1
+cin => cin.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa1|mux_2to1_1bit:comb_5
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa2
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux_2to1_1bit:comb_5.port0
+a => xor1.IN0
+b => b.IN1
+cin => cin.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa2|mux_2to1_1bit:comb_5
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa3
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux_2to1_1bit:comb_5.port0
+a => xor1.IN0
+b => b.IN1
+cin => cin.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa3|mux_2to1_1bit:comb_5
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa4
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= mux_2to1_1bit:comb_5.port0
+a => xor1.IN0
+b => b.IN1
+cin => cin.IN1
+
+
+|part4|part3_adder:adder1|fulladder1:fa4|mux_2to1_1bit:comb_5
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1
+HEX1[6] <= seg72:segd1.port0
+HEX1[5] <= seg72:segd1.port0
+HEX1[4] <= seg72:segd1.port0
+HEX1[3] <= seg72:segd1.port0
+HEX1[2] <= seg72:segd1.port0
+HEX1[1] <= seg72:segd1.port0
+HEX1[0] <= seg72:segd1.port0
+HEX0[6] <= seg71:segd0.port0
+HEX0[5] <= seg71:segd0.port0
+HEX0[4] <= seg71:segd0.port0
+HEX0[3] <= seg71:segd0.port0
+HEX0[2] <= seg71:segd0.port0
+HEX0[1] <= seg71:segd0.port0
+HEX0[0] <= seg71:segd0.port0
+addIn[0] => addIn[0].IN3
+addIn[1] => addIn[1].IN3
+addIn[2] => addIn[2].IN3
+addIn[3] => addIn[3].IN3
+cin => cin.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|comparator:comparator1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+V[0] => Equal0.IN4
+V[0] => Equal1.IN2
+V[0] => Equal2.IN4
+V[0] => Equal3.IN2
+V[0] => Equal4.IN4
+V[0] => Equal5.IN3
+V[0] => Equal6.IN4
+V[0] => Equal7.IN1
+V[0] => Equal8.IN4
+V[0] => Equal9.IN2
+V[1] => Equal0.IN1
+V[1] => Equal1.IN1
+V[1] => Equal2.IN3
+V[1] => Equal3.IN4
+V[1] => Equal4.IN2
+V[1] => Equal5.IN2
+V[1] => Equal6.IN3
+V[1] => Equal7.IN4
+V[1] => Equal8.IN1
+V[1] => Equal9.IN1
+V[2] => Equal0.IN3
+V[2] => Equal1.IN4
+V[2] => Equal2.IN1
+V[2] => Equal3.IN1
+V[2] => Equal4.IN1
+V[2] => Equal5.IN1
+V[2] => Equal6.IN2
+V[2] => Equal7.IN3
+V[2] => Equal8.IN3
+V[2] => Equal9.IN4
+V[3] => Equal0.IN0
+V[3] => Equal1.IN0
+V[3] => Equal2.IN0
+V[3] => Equal3.IN0
+V[3] => Equal4.IN0
+V[3] => Equal5.IN0
+V[3] => Equal6.IN1
+V[3] => Equal7.IN2
+V[3] => Equal8.IN2
+V[3] => Equal9.IN3
+V[4] => Equal0.IN2
+V[4] => Equal1.IN3
+V[4] => Equal2.IN2
+V[4] => Equal3.IN3
+V[4] => Equal4.IN3
+V[4] => Equal5.IN4
+V[4] => Equal6.IN0
+V[4] => Equal7.IN0
+V[4] => Equal8.IN0
+V[4] => Equal9.IN0
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|circuitA:circuita1
+M[0] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[2] <= M.DB_MAX_OUTPUT_PORT_TYPE
+M[3] <= M.DB_MAX_OUTPUT_PORT_TYPE
+V[0] => Equal0.IN3
+V[0] => Equal1.IN2
+V[0] => Equal2.IN3
+V[0] => Equal3.IN2
+V[0] => Equal4.IN3
+V[0] => Equal5.IN3
+V[0] => Equal6.IN3
+V[0] => Equal7.IN0
+V[0] => Equal8.IN3
+V[0] => Equal9.IN1
+V[1] => Equal0.IN1
+V[1] => Equal1.IN1
+V[1] => Equal2.IN2
+V[1] => Equal3.IN3
+V[1] => Equal4.IN2
+V[1] => Equal5.IN2
+V[1] => Equal6.IN2
+V[1] => Equal7.IN3
+V[1] => Equal8.IN0
+V[1] => Equal9.IN0
+V[2] => Equal0.IN2
+V[2] => Equal1.IN3
+V[2] => Equal2.IN1
+V[2] => Equal3.IN1
+V[2] => Equal4.IN1
+V[2] => Equal5.IN1
+V[2] => Equal6.IN1
+V[2] => Equal7.IN2
+V[2] => Equal8.IN2
+V[2] => Equal9.IN3
+V[3] => Equal0.IN0
+V[3] => Equal1.IN0
+V[3] => Equal2.IN0
+V[3] => Equal3.IN0
+V[3] => Equal4.IN0
+V[3] => Equal5.IN0
+V[3] => Equal6.IN0
+V[3] => Equal7.IN1
+V[3] => Equal8.IN1
+V[3] => Equal9.IN2
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|mux_2to1_1bit:mux3
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|mux_2to1_1bit:mux2
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|mux_2to1_1bit:mux1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|mux_2to1_1bit:mux0
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+x => out.IN0
+y => out.IN0
+s => out.IN1
+s => out.IN1
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|seg71:segd0
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+SW[0] => Equal0.IN3
+SW[0] => Equal1.IN0
+SW[0] => Equal2.IN3
+SW[0] => Equal3.IN1
+SW[0] => Equal4.IN3
+SW[0] => Equal5.IN1
+SW[0] => Equal6.IN3
+SW[0] => Equal7.IN2
+SW[0] => Equal8.IN3
+SW[0] => Equal9.IN1
+SW[1] => Equal0.IN2
+SW[1] => Equal1.IN3
+SW[1] => Equal2.IN0
+SW[1] => Equal3.IN0
+SW[1] => Equal4.IN2
+SW[1] => Equal5.IN3
+SW[1] => Equal6.IN1
+SW[1] => Equal7.IN1
+SW[1] => Equal8.IN2
+SW[1] => Equal9.IN3
+SW[2] => Equal0.IN1
+SW[2] => Equal1.IN2
+SW[2] => Equal2.IN2
+SW[2] => Equal3.IN3
+SW[2] => Equal4.IN0
+SW[2] => Equal5.IN0
+SW[2] => Equal6.IN0
+SW[2] => Equal7.IN0
+SW[2] => Equal8.IN1
+SW[2] => Equal9.IN2
+SW[3] => Equal0.IN0
+SW[3] => Equal1.IN1
+SW[3] => Equal2.IN1
+SW[3] => Equal3.IN2
+SW[3] => Equal4.IN1
+SW[3] => Equal5.IN2
+SW[3] => Equal6.IN2
+SW[3] => Equal7.IN3
+SW[3] => Equal8.IN0
+SW[3] => Equal9.IN0
+
+
+|part4|part4_bcdcircuit:bcdcircuit1|seg72:segd1
+HEX1[6] <= <VCC>
+HEX1[5] <= SW.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= SW.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= SW.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= <GND>
+HEX1[1] <= <GND>
+HEX1[0] <= SW.DB_MAX_OUTPUT_PORT_TYPE
+SW => HEX1[0].DATAIN
+SW => HEX1[3].DATAIN
+SW => HEX1[4].DATAIN
+SW => HEX1[5].DATAIN
+
+

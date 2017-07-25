@@ -1,0 +1,35 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do part5_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera/lab2/part5 {C:/Users/Suhas/Documents/altera/lab2/part5/part5.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module part5
+# 
+# Top level modules:
+# 	part5
+# 
+vsim -voptargs=+acc work.part5
+# vsim -voptargs=+acc work.part5 
+# Loading work.part5
+add wave -position insertpoint  \
+sim:/part5/a \
+sim:/part5/b \
+sim:/part5/cin \
+sim:/part5/To \
+sim:/part5/Zo \
+sim:/part5/c1 \
+sim:/part5/S0 \
+sim:/part5/S1
+force -freeze sim:/part5/a 1010 0
+force -freeze sim:/part5/b 0010 0
+force -freeze sim:/part5/cin 1 0
+run

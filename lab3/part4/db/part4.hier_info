@@ -1,0 +1,26 @@
+|part4
+D => D.IN3
+Clk => Clk.IN3
+Qa <= f_latch:f1.port2
+Qb <= d_flip:d1.port2
+Qc <= d_flop:d2.port2
+
+
+|part4|f_latch:f1
+D => Qa$latch.DATAIN
+Clk => Qa$latch.LATCH_ENABLE
+Qa <= Qa$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|d_flip:d1
+D => Qb~reg0.DATAIN
+Clk => Qb~reg0.CLK
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|d_flop:d2
+D => Qc~reg0.DATAIN
+Clk => Qc~reg0.CLK
+Qc <= Qc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

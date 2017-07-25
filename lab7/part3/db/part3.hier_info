@@ -1,0 +1,11 @@
+|part3
+SW[0] => ~NO_FANOUT~
+SW[1] => shift1[3].DATAIN
+LEDG[8] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[9] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+KEY[2] => shift1[0].CLK
+KEY[2] => shift1[1].CLK
+KEY[2] => shift1[2].CLK
+KEY[2] => shift1[3].CLK
+
+

@@ -1,0 +1,13 @@
+module part2(M, z, V);
+endmodule
+module comparator(z, V);
+input V;
+output z;
+assign z = (V==4'b1010)? 1'b1:
+			  (V==4'b1011)? 1'b1:
+			  (V==4'b1100)? 1'b1:
+			  (V==4'b1101)? 1'b1:
+			  (V==4'b1110)? 1'b1:
+			  (V==4'b1111)? 1'b1:1'b0;
+endmodule
+			  

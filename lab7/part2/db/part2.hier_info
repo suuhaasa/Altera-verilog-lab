@@ -1,0 +1,19 @@
+|part2
+SW[0] => next_state.OUTPUTSELECT
+SW[0] => next_state.OUTPUTSELECT
+SW[0] => state.00000.DATAIN
+SW[1] => next_state.DATAA
+SW[1] => next_state.DATAA
+LEDG[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= LEDG[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+LEDG[8] <= <GND>
+LEDG[9] <= always2.DB_MAX_OUTPUT_PORT_TYPE
+KEY[2] => state~1.DATAIN
+
+

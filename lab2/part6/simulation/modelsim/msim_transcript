@@ -1,0 +1,47 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do part6_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera/lab2/part6 {C:/Users/Suhas/Documents/altera/lab2/part6/part6.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module part6
+# -- Compiling module part6_convert
+# -- Compiling module seg71
+# -- Compiling module seg72
+# 
+# Top level modules:
+# 	part6
+# 
+vsim -voptargs=+acc work.part6
+# vsim -voptargs=+acc work.part6 
+# Loading work.part6
+# Loading work.part6_convert
+# Loading work.seg71
+# Loading work.seg72
+# ** Warning: (vsim-3015) C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(5): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'OUT2'. The port definition is at: C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(10).
+# 
+#         Region: /part6/convert
+# ** Warning: (vsim-3015) C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(5): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'OUT1'. The port definition is at: C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(10).
+# 
+#         Region: /part6/convert
+# ** Warning: (vsim-3015) C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(6): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'SW'. The port definition is at: C:/Users/Suhas/Documents/altera/lab2/part6/part6.v(18).
+# 
+#         Region: /part6/seg1
+add wave -position insertpoint  \
+sim:/part6/SW \
+sim:/part6/HEX1 \
+sim:/part6/HEX0 \
+sim:/part6/OUT1 \
+sim:/part6/OUT2
+force -freeze sim:/part6/SW 100100 0
+run
+force -freeze sim:/part6/SW 000001 0
+run

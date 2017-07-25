@@ -1,0 +1,41 @@
+|part1
+KEY[2] => ~NO_FANOUT~
+KEY[1] => KEY[1].IN1
+KEY[0] => KEY[0].IN1
+LEDG[0] <= counter:eight_bit.port2
+LEDG[1] <= counter:eight_bit.port2
+LEDG[2] <= counter:eight_bit.port2
+LEDG[3] <= counter:eight_bit.port2
+LEDG[4] <= counter:eight_bit.port2
+LEDG[5] <= counter:eight_bit.port2
+LEDG[6] <= counter:eight_bit.port2
+LEDG[7] <= counter:eight_bit.port2
+
+
+|part1|counter:eight_bit
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+clock => Q[4]~reg0.CLK
+clock => Q[5]~reg0.CLK
+clock => Q[6]~reg0.CLK
+clock => Q[7]~reg0.CLK
+reset_n => Q[0]~reg0.ACLR
+reset_n => Q[1]~reg0.ACLR
+reset_n => Q[2]~reg0.ACLR
+reset_n => Q[3]~reg0.ACLR
+reset_n => Q[4]~reg0.ACLR
+reset_n => Q[5]~reg0.ACLR
+reset_n => Q[6]~reg0.ACLR
+reset_n => Q[7]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

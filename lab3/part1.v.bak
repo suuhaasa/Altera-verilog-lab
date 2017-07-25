@@ -1,0 +1,8 @@
+module part1(input Clk, R, S, output Q);
+wire R_g, S_g, Qa, Qb;
+and(R_g, R, Clk);
+and(S_g, S, Clk);
+nor(Qa, R_g, Qb);
+nor(Qb, Qa, S_g);
+assign Q = Qa;
+endmodule

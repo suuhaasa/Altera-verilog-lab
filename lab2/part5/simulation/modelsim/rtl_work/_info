@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Suhas\Documents\altera\lab2\part5\simulation\modelsim
+vpart5
+!i10b 1
+!s100 LM=lG?E:B[:d^W<:5O;k72
+Ik3kl`AK]g:zFj07zfFTEM3
+VAnd^RNoge8P0LMA@jFf8L3
+Z1 dC:\Users\Suhas\Documents\altera\lab2\part5\simulation\modelsim
+w1423880749
+8C:/Users/Suhas/Documents/altera/lab2/part5/part5.v
+FC:/Users/Suhas/Documents/altera/lab2/part5/part5.v
+L0 1
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1423880797.116000
+!s107 C:/Users/Suhas/Documents/altera/lab2/part5/part5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Suhas/Documents/altera/lab2/part5|C:/Users/Suhas/Documents/altera/lab2/part5/part5.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera/lab2/part5 -O0

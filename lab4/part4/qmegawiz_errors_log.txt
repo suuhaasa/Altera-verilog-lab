@@ -1,0 +1,7 @@
+
+
+C:/Users/Suhas/Documents/altera/lab4/part4/lpm_counter.v
+
+Mar 05 11PM:30:48>: Variation file name (lpm_counter) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "lpm_countea" to prevent compilation errors

@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Suhas/Documents/altera/lab3/part1.v
+source_file = 1, C:/Users/Suhas/Documents/altera/lab3/Waveform.vwf
+source_file = 1, C:/Users/Suhas/Documents/altera/lab3/Waveform1.vwf
+source_file = 1, C:/Users/Suhas/Documents/altera/lab3/db/part1.cbx.xml
+design_name = part1
+instance = comp, \Q~output , Q~output, part1, 1
+instance = comp, \S~input , S~input, part1, 1
+instance = comp, \Clk~input , Clk~input, part1, 1
+instance = comp, \R~input , R~input, part1, 1
+instance = comp, \comb~0 , comb~0, part1, 1

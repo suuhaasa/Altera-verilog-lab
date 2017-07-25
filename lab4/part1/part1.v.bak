@@ -1,0 +1,12 @@
+module T_ff(data, clk, reset, q);
+input data, clk, reset;
+output q;
+reg q;
+always @(posedge clk, negedge reset)
+begin
+if(!reset)
+q<=1'b0;
+else if(data)
+q<=!q;
+end
+endmodule

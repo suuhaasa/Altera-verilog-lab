@@ -1,0 +1,126 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Suhas\Documents\altera\lab2\part2\simulation\modelsim
+vcircuitA
+!i10b 1
+!s100 nKCNaffOKm^OFH_X;Wabg0
+IcoUJL]CDe:fX^lG:7i0=Y3
+VDo:KoNOddadi_STi?bc?F0
+Z1 dC:\Users\Suhas\Documents\altera\lab2\part2\simulation\modelsim
+Z2 w1422846333
+Z3 8C:/Users/Suhas/Documents/altera/lab2/part2/part2.v
+Z4 FC:/Users/Suhas/Documents/altera/lab2/part2/part2.v
+L0 29
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1422846409.560000
+Z7 !s107 C:/Users/Suhas/Documents/altera/lab2/part2/part2.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Suhas/Documents/altera/lab2/part2|C:/Users/Suhas/Documents/altera/lab2/part2/part2.v|
+!s101 -O0
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera/lab2/part2 -O0
+ncircuit@a
+vcomparator
+!i10b 1
+!s100 M[OfMXGGN1D@]LV:eP5jF0
+I@8JjJHk:m<6UTGicSd`Z;0
+VVefm_fAEQl3djT<`6M_K10
+R1
+R2
+R3
+R4
+L0 18
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vmux_2to1_1bit
+!i10b 1
+!s100 eI24B6E=ViPP_k@ZXm36g0
+IWYdZ3c7[C>HEJm@5^@bf>2
+V^f@h6<i9cUDYQiF7h6N5b3
+R1
+R2
+R3
+R4
+L0 40
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vpart2
+!i10b 1
+!s100 ;`nkO71G;FN@FDiTJ_5>n2
+ID=APBA;z56_W^g8DKACNz3
+VW3=W1g=M>SDQgLO12mleY2
+R1
+R2
+R3
+R4
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vseg71
+!i10b 1
+!s100 1]RD_A:20V6FXNOGg_[<a0
+IGSX:KI1aY=4TA_1f<h0@X3
+V37:Q0VV6?Ifa[bn07YBXJ3
+R1
+R2
+R3
+R4
+L0 46
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vseg72
+!i10b 1
+!s100 WOgD^Y>lX9G^TOjgzdVkE3
+I:65`HW06f4EDUcjZU`W9W0
+VZTQ]KJcC^JPBMGllO:M242
+R1
+R2
+R3
+R4
+L0 60
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10

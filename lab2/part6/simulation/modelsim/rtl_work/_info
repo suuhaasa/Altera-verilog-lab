@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Suhas\Documents\altera\lab2\part6\simulation\modelsim
+vpart6
+!i10b 1
+!s100 JTa8>2@JCdil6R@gW6JZe1
+I@n9CE350]EC8HNMD0SQOQ2
+V@Co92_Te@8U]4MaZAlmN;3
+Z1 dC:\Users\Suhas\Documents\altera\lab2\part6\simulation\modelsim
+Z2 w1423883228
+Z3 8C:/Users/Suhas/Documents/altera/lab2/part6/part6.v
+Z4 FC:/Users/Suhas/Documents/altera/lab2/part6/part6.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1423883407.376000
+Z7 !s107 C:/Users/Suhas/Documents/altera/lab2/part6/part6.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Suhas/Documents/altera/lab2/part6|C:/Users/Suhas/Documents/altera/lab2/part6/part6.v|
+!s101 -O0
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/Users/Suhas/Documents/altera/lab2/part6 -O0
+vpart6_convert
+!i10b 1
+!s100 `OR^7l^Omoej`>Nem[3PK0
+I]^MKa@g8kOAE0ML[CR:OQ3
+VMM^X8dRRGXm[92[>YRHAH0
+R1
+R2
+R3
+R4
+L0 10
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vseg71
+!i10b 1
+!s100 WQBazMSDiNWRD6BEf<=hZ3
+I<o^kkR[RklWD_XJ?PglUd0
+V37:Q0VV6?Ifa[bn07YBXJ3
+R1
+R2
+R3
+R4
+L0 18
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vseg72
+!i10b 1
+!s100 id>UJ4N]ES`<@oiRiQ;OU1
+IU?f2[1PS4QejT4NaWZg6=0
+VZTQ]KJcC^JPBMGllO:M242
+R1
+R2
+R3
+R4
+L0 33
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10

@@ -1,0 +1,28 @@
+reg [26:0] count1;
+reg [26:0] count2;
+always @(posedge CLOCK_50)
+begin
+if(count1==26'd49_999_999)
+begin
+count1<=26'd0;
+delay1<=1;
+end
+else
+begin
+count1<=count1+1;
+delay1<=0;
+end
+end
+always @(posedge CLOCK_50)
+begin
+if(count2==26'd75_000_000)
+begin
+count2<=26'd0;
+delay2<=1;
+end
+else
+begin
+count2<=count2+1;
+delay2<=0;
+end
+end

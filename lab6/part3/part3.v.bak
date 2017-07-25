@@ -1,0 +1,12 @@
+module part4();
+wire a, b, s, p, cin, cout;
+full_adder a1(a, b, s, p, cin, cout);
+endmodule
+
+full_adder(a, b, s, p, cin, cout);
+input a, b, s;
+output p;
+wire x;
+assign x = a & b;
+assign {cout, p} = x  + a;
+endmodule
